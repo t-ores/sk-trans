@@ -1,0 +1,27 @@
+{
+  "name": "js-constructor",
+  "version": "1.0.0",
+  "description": "Web-Site constructor on pure JavaScript",
+  "main": "src/index.js",
+  "scripts": {
+    "server": "parcel ./src/index.html -p 8080 --open",
+    "build": "parcel build ./src/index.html"
+  },
+  "keywords": [
+    "js",
+    "javascript"
+  ],
+  "author": "t-ores <yakim.oresst@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "1.12.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-ores/t-ores-js-website-constructor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/t-ores/t-ores-js-website-constructor/issues"
+  },
+  "homepage": "https://github.com/t-ores/t-ores-js-website-constructor#readme"
+}
