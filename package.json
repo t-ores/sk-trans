@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/t-ores/t-ores-js-website-constructor/issues"
   },
-  "homepage": "https://github.com/t-ores/t-ores-js-website-constructor#readme"
+  "homepage": "https://github.com/t-ores/t-ores-js-website-constructor#readme",
+  "dependencies": {
+    "classes": "^0.3.0"
+  }
 }
