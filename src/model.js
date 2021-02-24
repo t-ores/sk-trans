@@ -1,13 +1,41 @@
-import image from './assets/image.png'
-import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock} from './classes/blocks'
+import image from './assets/img/hqdefault.jpg'
+import logo from './assets/img/logo.png'
+import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock, TopMenuBlock, HeaderBlock} from './classes/blocks'
 
-const text = `
-Крутые видео и уроки по JavaScript тут: <a href="https://youtube.com/c/VladilenMinin" target="_blank">Владилен Минин</a>. Тут ты найдешь исчерпывающую информацию по любым аспектам языка, любым фреймворкам, такие как: React, Vue, Angular, Node, Svelte, Express, Next, Nuxt и многое другое. Присоединяйся!
-`
+const text = 'loremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtext'
+
 
 export const model = [
-  new TitleBlock('Конструктор сайтов на чистом JavaScript', {
-    tag: 'h2',
+  //headerBlock
+  new HeaderBlock('SK-Trans', {
+    tag: 'header',
+    styles: {
+      position:'relative',
+      'min-height': '480px',
+      'padding-top': '20px'
+    }
+  }),
+  //headerBlock
+
+// MENU
+    new TopMenuBlock([
+        'About',
+        'Menu 2',
+        'Menu 3'
+    ]),
+// MENU
+
+  new TitleBlock('SK-Trans', {
+    tag: 'h1',
+    styles: {
+      //background: 'linear-gradient(to right, #ff0099, #493240)',
+      color: 'black',
+      padding: '1.5rem',
+      'text-align': 'center'
+    }
+  }),
+  new TitleBlock('Міжрегіональні вантажні перевезення', {
+    tag: 'h4',
     styles: {
       //background: 'linear-gradient(to right, #ff0099, #493240)',
       color: 'black',
@@ -41,7 +69,6 @@ export const model = [
   }),
   new TextBlock(text, {
     styles: {
-      //background: 'linear-gradient(to left, #f2994a, #f2c94c)',
       padding: '1rem',
       'font-weight': 'bold'
     }

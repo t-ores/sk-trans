@@ -117,18 +117,30 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"assets/image.png":[function(require,module,exports) {
-module.exports = "/image.90ac9039.png";
+})({"assets/img/hqdefault.jpg":[function(require,module,exports) {
+module.exports = "/hqdefault.c8d020fe.jpg";
+},{}],"assets/img/logo.png":[function(require,module,exports) {
+module.exports = "/logo.fb412750.png";
 },{}],"utils.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.container = container;
 exports.row = row;
 exports.col = col;
+exports.a = a;
 exports.css = css;
 exports.block = block;
+exports.ul_li = ul_li;
+exports.toggle_mnu = toggle_mnu;
+exports.topmenu = topmenu;
+
+function container(content) {
+  var styles = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+  return "<div class=\"container\" style=\"".concat(styles, "\">").concat(content, "</div>");
+}
 
 function row(content) {
   var styles = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
@@ -139,15 +151,13 @@ function col(content) {
   return "<div class=\"col-sm\">".concat(content, "</div>");
 }
 
+function a(content) {
+  return "<a href=\"#".concat(content.replace(' ', '_').toLowerCase(), "\">").concat(content, "</a>");
+}
+
 function css() {
   var styles = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-  // const keys = Object.keys(styles)
-  // const array = keys.map(key => {
-  //     return `${key}: ${styles[key]}`
-  // })
-  // return array.join(';')
-  //the same
   var toString = function toString(key) {
     return "".concat(key, ": ").concat(styles[key]);
   };
@@ -157,14 +167,31 @@ function css() {
 
 function block(type) {
   return "\n      <form name=\"".concat(type, "\">\n        <h5>").concat(type, "</h5>\n        <div class=\"form-group\">\n          <input class=\"form-control form-control-sm\" name=\"value\" placeholder=\"value\">\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control form-control-sm\" name=\"styles\" placeholder=\"styles\">\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary btn-sm\">\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C</button>\n      </form>\n      <hr />\n    ");
+} //T-ORES ADD FUNCTIONS
+
+
+function ul_li(content) {
+  return "<ul><li>".concat(content, "</li></ul>");
+} // MENU
+
+
+function toggle_mnu() {
+  return "<button class=\"toggle_mnu\">\n                <span class=\"sandwich\">\n                    <span class=\"sw-topper\"></span>\n                    <span class=\"sw-bottom\"></span>\n                    <span class=\"sw-footer\"></span>\n                </span>             \n            </button>";
 }
+
+function topmenu(content) {
+  var styles = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+  // console.log('cont',content)
+  return "<nav class=\"top_mnu\" style=\"".concat(styles, "\">").concat(content, "</nav>");
+} // MENU
+//T-ORES ADD FUNCTIONS END
 },{}],"classes/blocks.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TextBlock = exports.ColumnsBlock = exports.ImageBlock = exports.TitleBlock = void 0;
+exports.HeaderBlock = exports.TopMenuBlock = exports.TextBlock = exports.ColumnsBlock = exports.ImageBlock = exports.TitleBlock = void 0;
 
 var _utils = require("../utils");
 
@@ -306,9 +333,66 @@ var TextBlock = /*#__PURE__*/function (_Block4) {
   }]);
 
   return TextBlock;
-}(Block);
+}(Block); //T-ORES ADD FUNCTIONS
+
 
 exports.TextBlock = TextBlock;
+
+var TopMenuBlock = /*#__PURE__*/function (_Block5) {
+  _inherits(TopMenuBlock, _Block5);
+
+  var _super5 = _createSuper(TopMenuBlock);
+
+  function TopMenuBlock(value) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+    _classCallCheck(this, TopMenuBlock);
+
+    return _super5.call(this, value, options);
+  }
+
+  _createClass(TopMenuBlock, [{
+    key: "toHTML",
+    value: function toHTML() {
+      var html = (0, _utils.ul_li)(this.value.map(_utils.a).join('</li><li>'));
+      return (0, _utils.topmenu)(html, (0, _utils.css)(this.options.styles));
+    }
+  }]);
+
+  return TopMenuBlock;
+}(Block); //HEDER BLOCK
+
+
+exports.TopMenuBlock = TopMenuBlock;
+
+var HeaderBlock = /*#__PURE__*/function (_Block6) {
+  _inherits(HeaderBlock, _Block6);
+
+  var _super6 = _createSuper(HeaderBlock);
+
+  function HeaderBlock(value, options) {
+    _classCallCheck(this, HeaderBlock);
+
+    return _super6.call(this, value, options);
+  }
+
+  _createClass(HeaderBlock, [{
+    key: "toHTML",
+    value: function toHTML() {
+      var _this$options3 = this.options,
+          _this$options3$tag = _this$options3.tag,
+          tag = _this$options3$tag === void 0 ? 'div' : _this$options3$tag,
+          styles = _this$options3.styles;
+      return "<".concat(tag, " class=\"main_head\" data-parallax=\"scroll\" data-image-src=\"assets/img/bg.jpg\" data-z-index=\"1\" styles=\"").concat((0, _utils.css)(styles), "\">").concat((0, _utils.container)((0, _utils.row)((0, _utils.col)(this.value + (0, _utils.toggle_mnu)()))), "</").concat(tag, ">");
+    }
+  }]);
+
+  return HeaderBlock;
+}(Block); // HEDER BLOCK
+//T-ORES ADD FUNCTIONS END
+
+
+exports.HeaderBlock = HeaderBlock;
 },{"../utils":"utils.js"}],"model.js":[function(require,module,exports) {
 "use strict";
 
@@ -317,22 +401,43 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.model = void 0;
 
-var _image = _interopRequireDefault(require("./assets/image.png"));
+var _hqdefault = _interopRequireDefault(require("./assets/img/hqdefault.jpg"));
+
+var _logo = _interopRequireDefault(require("./assets/img/logo.png"));
 
 var _blocks = require("./classes/blocks");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var text = "\n\u041A\u0440\u0443\u0442\u044B\u0435 \u0432\u0438\u0434\u0435\u043E \u0438 \u0443\u0440\u043E\u043A\u0438 \u043F\u043E JavaScript \u0442\u0443\u0442: <a href=\"https://youtube.com/c/VladilenMinin\" target=\"_blank\">\u0412\u043B\u0430\u0434\u0438\u043B\u0435\u043D \u041C\u0438\u043D\u0438\u043D</a>. \u0422\u0443\u0442 \u0442\u044B \u043D\u0430\u0439\u0434\u0435\u0448\u044C \u0438\u0441\u0447\u0435\u0440\u043F\u044B\u0432\u0430\u044E\u0449\u0443\u044E \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u043F\u043E \u043B\u044E\u0431\u044B\u043C \u0430\u0441\u043F\u0435\u043A\u0442\u0430\u043C \u044F\u0437\u044B\u043A\u0430, \u043B\u044E\u0431\u044B\u043C \u0444\u0440\u0435\u0439\u043C\u0432\u043E\u0440\u043A\u0430\u043C, \u0442\u0430\u043A\u0438\u0435 \u043A\u0430\u043A: React, Vue, Angular, Node, Svelte, Express, Next, Nuxt \u0438 \u043C\u043D\u043E\u0433\u043E\u0435 \u0434\u0440\u0443\u0433\u043E\u0435. \u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u044F\u0439\u0441\u044F!\n";
-var model = [new _blocks.TitleBlock('Конструктор сайтов на чистом JavaScript', {
-  tag: 'h2',
+var text = 'loremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtext';
+var model = [//headerBlock
+new _blocks.HeaderBlock('SK-Trans', {
+  tag: 'header',
+  styles: {
+    position: 'relative',
+    'min-height': '480px',
+    'padding-top': '20px'
+  }
+}), //headerBlock
+// MENU
+new _blocks.TopMenuBlock(['About', 'Menu 2', 'Menu 3']), // MENU
+new _blocks.TitleBlock('SK-Trans', {
+  tag: 'h1',
   styles: {
     //background: 'linear-gradient(to right, #ff0099, #493240)',
     color: 'black',
     padding: '1.5rem',
     'text-align': 'center'
   }
-}), new _blocks.ImageBlock(_image.default, {
+}), new _blocks.TitleBlock('Міжрегіональні вантажні перевезення', {
+  tag: 'h4',
+  styles: {
+    //background: 'linear-gradient(to right, #ff0099, #493240)',
+    color: 'black',
+    padding: '1.5rem',
+    'text-align': 'center'
+  }
+}), new _blocks.ImageBlock(_hqdefault.default, {
   styles: {
     padding: '2rem 0',
     display: 'flex',
@@ -352,13 +457,12 @@ var model = [new _blocks.TitleBlock('Конструктор сайтов на ч
   }
 }), new _blocks.TextBlock(text, {
   styles: {
-    //background: 'linear-gradient(to left, #f2994a, #f2c94c)',
     padding: '1rem',
     'font-weight': 'bold'
   }
 })];
 exports.model = model;
-},{"./assets/image.png":"assets/image.png","./classes/blocks":"classes/blocks.js"}],"classes/site.js":[function(require,module,exports) {
+},{"./assets/img/hqdefault.jpg":"assets/img/hqdefault.jpg","./assets/img/logo.png":"assets/img/logo.png","./classes/blocks":"classes/blocks.js"}],"classes/site.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -569,22 +673,80 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles/main.css":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"assets/libs/animate/animate.min.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/libs/magnific-popup/magnific-popup.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/libs/linea/styles.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./fonts/linea-basic-10.eot":[["linea-basic-10.350d51a0.eot","assets/libs/linea/fonts/linea-basic-10.eot"],"assets/libs/linea/fonts/linea-basic-10.eot"],"./fonts/linea-basic-10.woff":[["linea-basic-10.d5d9d84c.woff","assets/libs/linea/fonts/linea-basic-10.woff"],"assets/libs/linea/fonts/linea-basic-10.woff"],"./fonts/linea-basic-10.ttf":[["linea-basic-10.a2912d6b.ttf","assets/libs/linea/fonts/linea-basic-10.ttf"],"assets/libs/linea/fonts/linea-basic-10.ttf"],"./fonts/linea-basic-10.svg":[["linea-basic-10.29b2a512.svg","assets/libs/linea/fonts/linea-basic-10.svg"],"assets/libs/linea/fonts/linea-basic-10.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/libs/font-awesome/css/font-awesome.min.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../fonts/fontawesome-webfont.eot":[["fontawesome-webfont.f4b248cb.eot","assets/libs/font-awesome/fonts/fontawesome-webfont.eot"],"assets/libs/font-awesome/fonts/fontawesome-webfont.eot"],"./../fonts/fontawesome-webfont.woff":[["fontawesome-webfont.dbf0549d.woff","assets/libs/font-awesome/fonts/fontawesome-webfont.woff"],"assets/libs/font-awesome/fonts/fontawesome-webfont.woff"],"./../fonts/fontawesome-webfont.ttf":[["fontawesome-webfont.2a46d57f.ttf","assets/libs/font-awesome/fonts/fontawesome-webfont.ttf"],"assets/libs/font-awesome/fonts/fontawesome-webfont.ttf"],"./../fonts/fontawesome-webfont.svg":[["fontawesome-webfont.2f6b8783.svg","assets/libs/font-awesome/fonts/fontawesome-webfont.svg"],"assets/libs/font-awesome/fonts/fontawesome-webfont.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/fonts.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../fonts/RalewayRegular/RalewayRegular.eot":[["RalewayRegular.eba68c13.eot","assets/fonts/RalewayRegular/RalewayRegular.eot"],"assets/fonts/RalewayRegular/RalewayRegular.eot"],"./../fonts/RalewayRegular/RalewayRegular.woff":[["RalewayRegular.006d802c.woff","assets/fonts/RalewayRegular/RalewayRegular.woff"],"assets/fonts/RalewayRegular/RalewayRegular.woff"],"./../fonts/RalewayRegular/RalewayRegular.ttf":[["RalewayRegular.1da8959e.ttf","assets/fonts/RalewayRegular/RalewayRegular.ttf"],"assets/fonts/RalewayRegular/RalewayRegular.ttf"],"./../fonts/RalewayBold/RalewayBold.eot":[["RalewayBold.6c38d6f1.eot","assets/fonts/RalewayBold/RalewayBold.eot"],"assets/fonts/RalewayBold/RalewayBold.eot"],"./../fonts/RalewayBold/RalewayBold.woff":[["RalewayBold.37803a83.woff","assets/fonts/RalewayBold/RalewayBold.woff"],"assets/fonts/RalewayBold/RalewayBold.woff"],"./../fonts/RalewayBold/RalewayBold.ttf":[["RalewayBold.1fdd93f1.ttf","assets/fonts/RalewayBold/RalewayBold.ttf"],"assets/fonts/RalewayBold/RalewayBold.ttf"],"./../fonts/RalewayLight/RalewayLight.eot":[["RalewayLight.2b0bf7e2.eot","assets/fonts/RalewayLight/RalewayLight.eot"],"assets/fonts/RalewayLight/RalewayLight.eot"],"./../fonts/RalewayLight/RalewayLight.woff":[["RalewayLight.e30b953a.woff","assets/fonts/RalewayLight/RalewayLight.woff"],"assets/fonts/RalewayLight/RalewayLight.woff"],"./../fonts/RalewayLight/RalewayLight.ttf":[["RalewayLight.d6ace252.ttf","assets/fonts/RalewayLight/RalewayLight.ttf"],"assets/fonts/RalewayLight/RalewayLight.ttf"],"./../fonts/RalewaySemiBold/RalewaySemiBold.eot":[["RalewaySemiBold.2abc24b5.eot","assets/fonts/RalewaySemiBold/RalewaySemiBold.eot"],"assets/fonts/RalewaySemiBold/RalewaySemiBold.eot"],"./../fonts/RalewaySemiBold/RalewaySemiBold.woff":[["RalewaySemiBold.4cf6c0cb.woff","assets/fonts/RalewaySemiBold/RalewaySemiBold.woff"],"assets/fonts/RalewaySemiBold/RalewaySemiBold.woff"],"./../fonts/RalewaySemiBold/RalewaySemiBold.ttf":[["RalewaySemiBold.e828505a.ttf","assets/fonts/RalewaySemiBold/RalewaySemiBold.ttf"],"assets/fonts/RalewaySemiBold/RalewaySemiBold.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/main.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../img/preloader.gif":[["preloader.bdfbb002.gif","assets/img/preloader.gif"],"assets/img/preloader.gif"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/skins/blue.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/media.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../img/preloader.gif":[["preloader.bdfbb002.gif","assets/img/preloader.gif"],"assets/img/preloader.gif"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _model = require("./model");
 
 var _app = require("./classes/app");
 
-require("./styles/main.css");
+require("./assets/libs/animate/animate.min.css");
 
+require("./assets/libs/magnific-popup/magnific-popup.css");
+
+require("./assets/libs/linea/styles.css");
+
+require("./assets/libs/font-awesome/css/font-awesome.min.css");
+
+require("./assets/styles/fonts.css");
+
+require("./assets/styles/main.css");
+
+require("./assets/styles/skins/blue.css");
+
+require("./assets/styles/media.css");
+
+require("./assets/styles/style.css");
+
+//CSS
+//CSS
 new _app.App(_model.model).init();
-},{"./model":"model.js","./classes/app":"classes/app.js","./styles/main.css":"styles/main.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./model":"model.js","./classes/app":"classes/app.js","./assets/libs/animate/animate.min.css":"assets/libs/animate/animate.min.css","./assets/libs/magnific-popup/magnific-popup.css":"assets/libs/magnific-popup/magnific-popup.css","./assets/libs/linea/styles.css":"assets/libs/linea/styles.css","./assets/libs/font-awesome/css/font-awesome.min.css":"assets/libs/font-awesome/css/font-awesome.min.css","./assets/styles/fonts.css":"assets/styles/fonts.css","./assets/styles/main.css":"assets/styles/main.css","./assets/styles/skins/blue.css":"assets/styles/skins/blue.css","./assets/styles/media.css":"assets/styles/media.css","./assets/styles/style.css":"assets/styles/style.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -612,7 +774,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56850" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46299" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

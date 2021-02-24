@@ -1,4 +1,4 @@
-import image from './assets/image.png'
+import image from './assets/img/image.PNG'
 import {Block} from './classes/blocks'
 
 export const model = [

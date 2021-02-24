@@ -1,0 +1,66 @@
+#app {
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*left: 200px;*/
+    /* left: 0; */
+    width: 100%;
+    height: auto;
+}
+.content>div{
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    z-index: 100;
+    padding: 10px;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    overflow-y: auto;
+}
+
+.topmenu{
+    display: flex;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    min-height: 5vh;
+}
+.topmenu>div{
+
+}
+.loader {
+    background: none repeat scroll 0 0 #ffffff;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999; }
+.loader .loader_inner {
+    background-image: url("../img/preloader.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-posirion: center center;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute; }
