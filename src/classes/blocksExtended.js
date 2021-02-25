@@ -11,16 +11,6 @@ class BlockEXT {
 }
 
 //T-ORES ADD FUNCTIONS
-//TEST
-export class fluid extends BlockEXT{
-  constructor(value, options=''){super(value, options)}
-  toHTML() {
-    const html = this.value
-    return c_fluid(html, css(this.options.styles))
-  }
-}
-//TEST
-
 export class TopMenuBlock extends BlockEXT {
   constructor(value, options='') {
     super(value, options)
@@ -40,7 +30,7 @@ export class HeaderBlock extends BlockEXT {
     const {logoStyles:logoS, tag = 'div', h1, p} = this.options
     return `
     <${tag} id="header" class="main_head">
-        ${container(logo(this.value, logoS) + toggle_mnu())},${top_wrapper(h1,p)}
+        ${c_fluid(logo(this.value, logoS) + toggle_mnu())},${top_wrapper(h1,p)}
     </${tag}>`
   }
 }

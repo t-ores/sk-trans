@@ -26,7 +26,9 @@ export const model = [
         logoStyles: {
           width: '100px',
           height: 'auto',
-          'padding': '0'
+          'padding': '0px 10px',
+          margin: '0px 0px 0px 5vw',
+          'z-index': '50'
         },
         h1:'SK-Trans',
         p:'Міжрегіональні вантажні перевезення'

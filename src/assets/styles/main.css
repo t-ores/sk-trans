@@ -95,7 +95,9 @@ section {
     position: absolute; }
 
 .logo_container {
-  float: left; }
+  float: left;
+  z-index: 200;
+}
 
 svg {
   height: 60px;

@@ -46,6 +46,10 @@ $(document).ready(function() {
 		bleed: 0,
 	});
 
+	$('.logo_container').click(function (){
+		window.location.href = "/";
+	})
+
 });
 
 $(window).on('load', function (){
