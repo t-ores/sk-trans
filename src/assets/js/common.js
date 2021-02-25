@@ -1,9 +1,9 @@
-// var $ = require('jquery')
+import background from '../img/bg.jpg'
 
 $(document).ready(function() {
 
 	function heightDetect() {
-		$(".main_head").css("height", $(window).height());
+		$("#header").css("height", $(window).height());
 	}
 	heightDetect();
 	$(window).resize(function() {
@@ -29,18 +29,25 @@ $(document).ready(function() {
 			$(".top_text").css("opacity", ".1");
 			$(".top_mnu").fadeIn(600);
 			$(".top_mnu li a").addClass("fadeInUp animated");
-		};
+		}
 	});
 
 	let nav = $("nav.top_mnu")
 	$("header.main_head>div>div>div").append(nav)
 
+	$('.main_head').parallax({
+		imageSrc: background,
+		naturalWidth:1,
+		naturalHeight:0,
+		speed: 0.6,
+		positionX: 'center',
+		positionY: "-50px",
+		zIndex: -100,
+		bleed: 0,
+	});
+
 });
 
-// $(window).load(function() {
-// 	$(".loader_inner").fadeOut();
-// 	$(".loader").delay(400).fadeOut("slow");
-// });
 $(window).on('load', function (){
 	$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");

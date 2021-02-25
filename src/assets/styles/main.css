@@ -64,8 +64,12 @@ section {
 
 .main_head {
   min-height: 480px;
-  padding-top: 20px; }
+  padding-top: 20px;
+  background-color: rgba(11, 44, 56, 0.78);
+}
+.parallax-mirror{
 
+}
 .loader {
   background: none repeat scroll 0 0 #ffffff;
   bottom: 0;
@@ -254,15 +258,17 @@ svg path {
       margin: 0;
       text-transform: uppercase;
       -webkit-animation-delay: 1s;
-      animation-delay: 1s; }
+      animation-delay: 1s;
+      font-size: 2rem;
+      letter-spacing: 2px}
     .top_wrapper .top_text h1 {
       display: inline-block;
       padding: 10px 35px;
       color: #fff;
-      border: 8px solid #fff;
+      border: 25px solid #fff;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 2.8em;
+      font-size: 8rem;
       background-color: rgba(0, 0, 0, 0.1);
       margin-left: 20px;
       margin-right: 20px;

@@ -38,8 +38,11 @@ export function block(type) {
     `
   }
 //T-ORES ADD FUNCTIONS
-export function div(content, styles = ''){
-    return `<div style="${styles}">${content}</div>`
+export function div(content, classes='', styles = '', id=''){
+    return `<div id="${id}" class="${classes}" style="${styles}">${content}</div>`
+}
+export function div_c(classes='', content){
+    return `<div class="${classes}">${content}</div>`
 }
 
 export function ul_li(content) {
@@ -62,6 +65,10 @@ export function topmenu(content, styles = '') {
 export function logo(content, styles) {
     const alt = 'SK-Trans Logo'
     return `<div class="logo_container"><img src="${content}" alt="${alt}" style="${css(styles)}"></div>`
+}
+export function top_wrapper(h1, p) {
+    const top_wrapper_content = `<h1>${h1}</h1></br><p>${p}</p>`
+    return div_c('top_wrapper',div_c('top_descr',div_c('top_centered',div_c('top_text', top_wrapper_content))))
 }
 // MENU
 //T-ORES ADD FUNCTIONS END
