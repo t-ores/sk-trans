@@ -1,5 +1,5 @@
 export function container(content, styles = '') {
-    return `<div class="container" style="${styles}">${content}</div>`
+    return `<div class="container" style="${styles}">${row(col(content))}</div>`
 }
 
 export function row(content, styles = '') {
@@ -12,7 +12,11 @@ export function col(content) {
 export function a(content){
     return `<a href="#${content.replace(' ','_').toLowerCase()}">${content}</a>`
 }
-
+//FLUID TEST
+export function c_fluid(content, styles = '') {
+    return `<div class="container-fluid" style="${styles}">${row(col(content))}</div>`
+}
+//FLUID TEST END
 export function css(styles = {}){
     const toString = key => `${key}: ${styles[key]}`
     return Object.keys(styles).map(toString).join(';')
@@ -34,6 +38,10 @@ export function block(type) {
     `
   }
 //T-ORES ADD FUNCTIONS
+export function div(content, styles = ''){
+    return `<div style="${styles}">${content}</div>`
+}
+
 export function ul_li(content) {
     return `<ul><li>${content}</li></ul>`
 }
@@ -49,8 +57,11 @@ export function toggle_mnu() {
 }
 
 export function topmenu(content, styles = '') {
-    // console.log('cont',content)
     return `<nav class="top_mnu" style="${styles}">${content}</nav>`
+}
+export function logo(content, styles) {
+    const alt = 'SK-Trans Logo'
+    return `<div class="logo_container"><img src="${content}" alt="${alt}" style="${css(styles)}"></div>`
 }
 // MENU
 //T-ORES ADD FUNCTIONS END

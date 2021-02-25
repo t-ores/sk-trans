@@ -34,6 +34,7 @@ $(document).ready(function() {
 
 	let nav = $("nav.top_mnu")
 	$("header.main_head>div>div>div").append(nav)
+
 });
 
 // $(window).load(function() {

@@ -5,9 +5,9 @@ export class App {
   constructor(model) {
     this.model = model
   }
-
   init() {
     const site = new Site('#site')
+    //const site = new Site("body")
 
     site.render(this.model)
 
@@ -17,5 +17,6 @@ export class App {
     }
 
     new Sidebar('#panel', updateCallback)
+    //new Sidebar('header', updateCallback)
   }
 }

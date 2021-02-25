@@ -1,20 +1,47 @@
-import image from './assets/img/hqdefault.jpg'
 import logo from './assets/img/logo.png'
-import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock, TopMenuBlock, HeaderBlock} from './classes/blocks'
+import background from './assets/img/bg.jpg'
+import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock, TopMenuBlock, HeaderBlock, fluid} from './classes/blocks'
 
 const text = 'loremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtextloremtext'
 
-
 export const model = [
-  //headerBlock
-  new HeaderBlock('SK-Trans', {
-    tag: 'header',
-    styles: {
-      position:'relative',
-      'min-height': '480px',
-      'padding-top': '20px'
-    }
-  }),
+  // new fluid('test fluid',{
+  //   styles:{
+  //     position: 'absolute',
+  //     width: '100%',
+  //     height: '300px',
+  //     background:'green'
+  //   }
+  // }),
+  // new ImageBlock(image, {
+  //   styles: {
+  //     padding: '2rem 0',
+  //     display: 'flex',
+  //     'justify-content': 'center'
+  //   },
+  //   imageStyles: {
+  //     width: '500px',
+  //     height: 'auto'
+  //   },
+  //   alt: 'Это картинка'
+  // }),
+  //headerBlock ...('SK-Trans-logo', {...
+  new HeaderBlock(
+      logo,
+      {
+        tag: 'header',
+        styles: {
+          position:'relative',
+          'min-height': '480px',
+          'padding-top': '20px'
+        },
+        logoStyles: {
+          width: '70px',
+          height: 'auto',
+          'padding': '10px'
+        },
+        bg: background
+      }),
   //headerBlock
 
 // MENU
@@ -43,18 +70,7 @@ export const model = [
       'text-align': 'center'
     }
   }),
-  new ImageBlock(image, {
-    styles: {
-      padding: '2rem 0',
-      display: 'flex',
-      'justify-content': 'center'
-    },
-    imageStyles: {
-      width: '500px',
-      height: 'auto'
-    },
-    alt: 'Это картинка'
-  }),
+
   new ColumnsBlock([
     'Приложение на чистом JavaScript, без использования библиотек',
     'Узнаешь как работают принципы SOLID и ООП в JavaScript за один курс',

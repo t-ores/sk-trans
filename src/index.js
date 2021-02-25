@@ -11,5 +11,4 @@ import './assets/styles/skins/blue.css'
 import './assets/styles/media.css'
 import './assets/styles/style.css'
 //CSS
-
 new App(model).init()

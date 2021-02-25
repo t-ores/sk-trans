@@ -4,7 +4,7 @@
   "description": "Web-Site constructor on pure JavaScript",
   "main": "src/index.js",
   "scripts": {
-    "server": "parcel ./src/index.html -p 8080 --open",
+    "server": "parcel ./src/index.html -p 8000 --open",
     "build": "parcel build ./src/index.html"
   },
   "keywords": [
