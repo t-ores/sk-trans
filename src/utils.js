@@ -68,7 +68,7 @@ export function logo(content, styles) {
 }
 export function top_wrapper(h1, p) {
     const top_wrapper_content = `<h1>${h1}</h1></br><p>${p}</p>`
-    return div_c('top_wrapper',div_c('top_descr',div_c('top_centered',div_c('top_text', top_wrapper_content))))
+    return div_c('top_wrapper', div_c('top_descr', div_c('top_centered', div_c('top_text', top_wrapper_content))))
 }
 // MENU
 //T-ORES ADD FUNCTIONS END

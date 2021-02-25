@@ -1,4 +1,5 @@
 import background from '../img/bg.jpg'
+import background_m from '../img/bg-mobile-2.jpg'
 
 $(document).ready(function() {
 
@@ -35,20 +36,31 @@ $(document).ready(function() {
 	let nav = $("nav.top_mnu")
 	$("header.main_head>div>div>div").append(nav)
 
-	$('.main_head').parallax({
-		imageSrc: background,
-		naturalWidth:1,
-		naturalHeight:0,
-		speed: 0.6,
-		positionX: 'center',
-		positionY: "-50px",
-		zIndex: -100,
-		bleed: 0,
-	});
+	if($(window).width() > 980){
+		$('.main_head').parallax({
+			imageSrc: background,
+			naturalWidth:1,
+			naturalHeight:0,
+			speed: 0.6,
+			positionX: 'center',
+			positionY: 'center',
+			zIndex: -100,
+			bleed: 0,
+		})
+	}else{
+		$('.main_head').parallax({
+			imageSrc: background_m,
+		});
+	}
+	// $('#header').
+
 
 	$('.logo_container').click(function (){
 		window.location.href = "/";
 	})
+	// $('.logo_container>img').hover(function (){
+	// 	this.css('cursor', 'pointer');
+	// })
 
 });
 

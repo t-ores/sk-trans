@@ -30,7 +30,7 @@ export class HeaderBlock extends BlockEXT {
     const {logoStyles:logoS, tag = 'div', h1, p} = this.options
     return `
     <${tag} id="header" class="main_head">
-        ${c_fluid(logo(this.value, logoS) + toggle_mnu())},${top_wrapper(h1,p)}
+        ${c_fluid(logo(this.value, logoS) + toggle_mnu())}${top_wrapper(h1, p)}
     </${tag}>`
   }
 }
