@@ -26,6 +26,7 @@
   "homepage": "https://github.com/t-ores/sk-trans#readme",
   "dependencies": {
     "classes": "^0.3.0",
+    "firebase": "^8.2.9",
     "jquery": "^3.5.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
