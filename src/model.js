@@ -1,8 +1,26 @@
 import logo from './assets/img/logo-light.png'
 import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock} from './classes/blocks'
-import {TopMenuBlock, HeaderBlock, TopWrapper, AboutBlock} from './classes/blocksExtended'
+import {TopMenuBlock, HeaderBlock, TopWrapper, AboutBlock, ColumnsBlockEXT} from './classes/blocksExtended'
 
 const text = 'SIMPLE_DUMMY_TEXT_BLOCK'
+const about_right = '<h3>Немного о себе</h3><p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p><p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>'
+const about_left = '<h3>Персональная информация</h3>' +
+    '<h2 class="personal_header">Качинський Георгiй Вiталiйович</h2>' +
+    '<ul>' +
+    '<li>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</li>' +
+    '<li>День рождения: 3 июня 1988 года</li>' +
+    '<li>Номер телефона: +7 999 999 99 99</li>' +
+    '<li>E-mail: <a href="mailto:youmail@mail.ru">youmail@mail.ru</a></li>' +
+    '<li>Веб-сайт: <a href="//webdesign-master.ru" target="_blank">sk-trans.com.ua</a></li>' +
+    '</ul>' +
+    '<div class="social_wrap">' +
+    '<ul>' +
+    '<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>' +
+    '<li><a href="#" target="_blank"><i class="fa fa-vk"></i></a></li>' +
+    '<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>' +
+    '<li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li>' +
+    '</ul>' +
+    '</div>'
 
 export const model = [
   // MENU
@@ -34,16 +52,27 @@ export const model = [
         p:'Міжрегіональні вантажні перевезення'
       }),
   //HEADER
+
     // ABOUT
-    new AboutBlock(
-        'VALUE',
-        {
-            tag: 'section',
-            id: 'about',
-            classes: 'bg_light',
-            h2:'Про компанію',
-            p:'SK-Trans'
-        }),
+    new AboutBlock([
+        about_right,
+        '',
+        about_left
+        //'Про компанію Про компанію Про компанію Про компанію Про компанію Про компанію Про компанію',
+        //'SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans '
+    ], {
+        // styles: {
+        //     'font-size': '2rem',
+        //     'text-align': 'center',
+        //     padding: '2rem',
+        //     color: 'black',
+        // },
+        tag: 'section',
+        id: 'about',
+        classes: 'bg_light',
+        h2:'Про компанію',
+        p:'SK-Trans'
+    }),
     //ABOUT
 
   // new TitleBlock('SK-Trans', {

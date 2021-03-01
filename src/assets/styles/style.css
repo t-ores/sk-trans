@@ -75,3 +75,38 @@
     background-color: rgba(11, 44, 56, 0.8);
     z-index: 5;
 }
+
+/*TESTS*/
+.s_about{
+    padding-bottom: 0;
+}
+/*TESTS*/
+
+/*OVERRIDE MAIN.CSS*/
+section,
+.main_head {
+    position: relative; }
+section h3,
+.main_head h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 35px; }
+
+.s_about p {
+    font-size: 18px;
+}
+.s_about li{
+    font-size: 18px;
+}
+.social_wrap li{
+    font-size: 50px !important;
+    padding: 0 5%;
+}
+
+section .personal_header{
+    font-size: 18px;
+}
+/*OVERRIDE MAIN.CSS*/

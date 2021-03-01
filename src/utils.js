@@ -1,6 +1,9 @@
 export function container(content, styles = '') {
     return `<div class="container" style="${styles}">${row(col(content))}</div>`
 }
+export function l_container(content, styles = '') {
+    return `<div class="container" style="${styles}">${content}</div>`
+}
 
 export function row(content, styles = '') {
     return `<div class="row" style="${styles}">${content}</div>`
@@ -15,6 +18,9 @@ export function a(content){
 //FLUID TEST
 export function c_fluid(content, styles = '', classes='') {
     return `<div class="container-fluid ${classes}" style="${styles}">${row(col(content))}</div>`
+}
+export function l_c_fluid(content, styles = '', classes='') {
+    return `<div class="container-fluid ${classes}" style="${styles}">${content}</div>`
 }
 //FLUID TEST END
 export function css(styles = {}){
@@ -82,6 +88,9 @@ export function s_header(h2, p) {
             </div>`
 }
 export function s_content(content) {
-    return `<div class="section_content">${container(row(col(content)))}</div>`
+    return `<div class="section_content">${l_container(content)}</div>`
 }
+// export function s_content(content) {
+//     return `<div class="section_content">${l_c_fluid(content)}</div>`
+// }
 //T-ORES ADD FUNCTIONS END

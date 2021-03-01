@@ -6,11 +6,13 @@ $(document).ready(function() {
 
 	function heightDetect() {
 		$("#header").css("height", $(window).height());
+		$("section").css("height", $(window).height());
 	}
 	heightDetect();
 	$(window).resize(function() {
 		heightDetect();
 	});
+
 
 	$(".toggle_mnu").click(function() {
 		$(".sandwich").toggleClass("active");
