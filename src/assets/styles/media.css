@@ -27,6 +27,9 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+	.top_wrapper .top_descr .top_centered{
+		background-color: rgba(11,44,56,.8);
+	}
 	.top_wrapper .top_text h1 {
 		font-size: 2em;
 		padding-left: 10px;
