@@ -1,4 +1,4 @@
-import {c_fluid, container, col, css, row, topmenu, toggle_mnu, a, ul_li, logo, div, top_wrapper} from '../utils'
+import {c_fluid, container, col, css, row, topmenu, toggle_mnu, a, ul_li, logo, div, top_wrapper, div_c, s_header, s_content} from '../utils'
 
 class BlockEXT {
   constructor(value, options) {
@@ -34,6 +34,21 @@ export class HeaderBlock extends BlockEXT {
     </${tag}>`
   }
 }
-// HEDER BLOCK
+//HEDER BLOCK
+
+//ABOUT BLOCK
+export class AboutBlock extends BlockEXT {
+  constructor(value, options) {
+    super(value, options)
+  }
+  toHTML() {
+    const {tag = 'div', h2, p, id, classes} = this.options
+    return `
+    <${tag} id="${id}" class="s_${id} ${classes}">
+        ${s_header(h2, p)} ${s_content(this.value)}
+    </${tag}>`
+  }
+}
+//ABOUT BLOCK
 
 //T-ORES ADD FUNCTIONS END

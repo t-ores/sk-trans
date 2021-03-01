@@ -205,8 +205,8 @@ svg path {
     -webkit-animation-duration: 0.01s;
     animation-duration: 0.01s; }
     .top_mnu ul li:nth-child(1) a {
-      -webkit-animation-delay: 0;
-      animation-delay: 0; }
+      -webkit-animation-delay: 0ms;
+      animation-delay: 0ms; }
     .top_mnu ul li:nth-child(2) a {
       -webkit-animation-delay: 0.1s;
       animation-delay: 0.1s; }

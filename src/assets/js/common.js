@@ -1,5 +1,6 @@
 import background from '../img/bg.jpg'
-import background_m from '../img/bg-mobile-2.jpg'
+//import background_m from '../img/bg-mobile-2.jpg'
+import background_m from '../img/bg-mobile-4.jpg'
 
 $(document).ready(function() {
 
@@ -36,6 +37,8 @@ $(document).ready(function() {
 	let nav = $("nav.top_mnu")
 	$("header.main_head>div>div>div").append(nav)
 
+
+
 	if($(window).width() > 980){
 		$('.main_head').parallax({
 			imageSrc: background,
@@ -51,6 +54,7 @@ $(document).ready(function() {
 		$('.main_head').parallax({
 			imageSrc: background_m,
 		});
+		//$("header.main_head").after('<div class="mobile-bg-blackout"></div>')
 	}
 	// $('#header').
 

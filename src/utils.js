@@ -13,8 +13,8 @@ export function a(content){
     return `<a href="#${content.replace(' ','_').toLowerCase()}">${content}</a>`
 }
 //FLUID TEST
-export function c_fluid(content, styles = '') {
-    return `<div class="container-fluid" style="${styles}">${row(col(content))}</div>`
+export function c_fluid(content, styles = '', classes='') {
+    return `<div class="container-fluid ${classes}" style="${styles}">${row(col(content))}</div>`
 }
 //FLUID TEST END
 export function css(styles = {}){
@@ -71,4 +71,17 @@ export function top_wrapper(h1, p) {
     return div_c('top_wrapper', div_c('top_descr', div_c('top_centered', div_c('top_text', top_wrapper_content))))
 }
 // MENU
+
+export function s_header(h2, p) {
+    return `
+            <div class="section_header">
+                <h2>${h2}</h2>
+                <div class="s_descr_wrap">
+                    <div class="s_descr">${p}</div>
+                </div>
+            </div>`
+}
+export function s_content(content) {
+    return `<div class="section_content">${container(row(col(content)))}</div>`
+}
 //T-ORES ADD FUNCTIONS END

@@ -1,6 +1,6 @@
 import logo from './assets/img/logo-light.png'
 import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock} from './classes/blocks'
-import {TopMenuBlock, HeaderBlock, TopWrapper} from './classes/blocksExtended'
+import {TopMenuBlock, HeaderBlock, TopWrapper, AboutBlock} from './classes/blocksExtended'
 
 const text = 'SIMPLE_DUMMY_TEXT_BLOCK'
 
@@ -28,31 +28,42 @@ export const model = [
           height: 'auto',
           'padding': '0px 10px',
           margin: '0px 0px 0px 5vw',
-          'z-index': '50'
+          //'z-index': '50'
         },
         h1:'SK-Trans',
         p:'Міжрегіональні вантажні перевезення'
       }),
   //HEADER
+    // ABOUT
+    new AboutBlock(
+        'VALUE',
+        {
+            tag: 'section',
+            id: 'about',
+            classes: 'bg_light',
+            h2:'Про компанію',
+            p:'SK-Trans'
+        }),
+    //ABOUT
 
-  new TitleBlock('SK-Trans', {
-    tag: 'h1',
-    styles: {
-      color: 'black',
-      padding: '1.5rem',
-      'text-align': 'center',
-      'padding-bottom': '0vh'
-    }
-  }),
-  new TitleBlock('Про компанію', {
-    tag: 'h4',
-    styles: {
-      color: 'black',
-      padding: '0',
-      'text-align': 'center',
-      'min-height': '800px'
-    }
-  }),
+  // new TitleBlock('SK-Trans', {
+  //   tag: 'h1',
+  //   styles: {
+  //     color: 'black',
+  //     padding: '1.5rem',
+  //     'text-align': 'center',
+  //     'padding-bottom': '0vh'
+  //   }
+  // }),
+  // new TitleBlock('Про компанію', {
+  //   tag: 'h4',
+  //   styles: {
+  //     color: 'black',
+  //     padding: '0',
+  //     'text-align': 'center',
+  //     'min-height': '800px'
+  //   }
+  // }),
 
   // new ColumnsBlock([
   //   'Приложение на чистом JavaScript, без использования библиотек',
