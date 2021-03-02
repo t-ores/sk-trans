@@ -6,9 +6,9 @@ import './assets/libs/magnific-popup/magnific-popup.css'
 import './assets/libs/linea/styles.css'
 import './assets/libs/font-awesome/css/font-awesome.min.css'
 import './assets/styles/fonts.css'
-import './assets/styles/main.css'
 import './assets/styles/skins/blue.css'
-import './assets/styles/media.css'
+import './assets/styles/main.css'
 import './assets/styles/style.css'
+import './assets/styles/media.css'
 //CSS
 new App(model).init()

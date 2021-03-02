@@ -91,22 +91,22 @@ section h3,
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 1vh;
+    font-size: 3vh;
     margin-top: 0;
     margin-bottom: 35px; }
 
 .s_about p {
-    font-size: 1vh;
+    font-size: 2.3vh;
 }
 .s_about li{
-    font-size: 1vh;
+    font-size: 2.3vh;
 }
 .social_wrap li{
-    font-size: 3vh !important;
-    padding: 0 1vh;
+    font-size: 6vh !important;
+    padding: 0 4vh;
 }
 
 section .personal_header{
-    font-size: 1vh;
+    font-size: 3vh;
 }
 /*OVERRIDE MAIN.CSS*/

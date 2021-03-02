@@ -2,11 +2,16 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
+	/*.s_about p{*/
+	/*	font-size: 2vh;*/
+	/*}*/
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	/*.s_about p{*/
+	/*	font-size: 2vh;*/
+	/*}*/
 	.logo_container>img{
 		width: 200px !important;
 		z-index: 100 !important;
@@ -22,6 +27,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.social_wrap li{
+		padding: 0 2vh;
+	}
 	.resume_container .left,
 	.section_content .resume_container h3,
 	.resume_container .resume_icon {
@@ -31,6 +39,7 @@
 	.resume_container .left h3 {
 		margin-top: 0;
 	}
+
 }
 
 /* Extra Small Devices, Phones */
@@ -78,7 +87,26 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-
+	.s_descr_wrap .s_descr{
+		font-size: 2vh;
+		margin-bottom: 3.5vh;
+	}
+	section h2{
+		font-size: 3vh;
+	}
+	section .personal_header {
+		font-size: 2.8vh;
+	}
+	section h3, .main_head h3{
+		margin-top: 55px;
+	}
+	.s_about .social_wrap ul{
+		display: flex;
+	}
+	.social_wrap li{
+		padding: 0 2vh;
+		margin: auto;
+	}
 }
 
 /* Medium Devices, Desktops */
