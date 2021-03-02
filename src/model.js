@@ -1,6 +1,6 @@
 import logo from './assets/img/logo-light.png'
 import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock} from './classes/blocks'
-import {TopMenuBlock, HeaderBlock, TopWrapper, AboutBlock, ColumnsBlockEXT} from './classes/blocksExtended'
+import {TopMenuBlock, HeaderBlock, AboutBlock, PortfolioBlock} from './classes/blocksExtended'
 
 const text = 'SIMPLE_DUMMY_TEXT_BLOCK'
 const about_right = '<h3>Немного о себе</h3><p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p><p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>'
@@ -20,6 +20,16 @@ const about_left = '<h3>Персональная информация</h3>' +
     '<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>' +
     '<li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li>' +
     '</ul>' +
+    '</div>'
+
+const portfolio_controls = '' +
+    '<div class="filter_div controls">' +
+        '<ul>' +
+            '<li class="filter active" data-filter="all">Всі послуги</li>' +
+            '<li class="filter" data-filter=".category-1">Перевезення</li>' +
+            '<li class="filter" data-filter=".category-2">Послуга 1</li>' +
+            '<li class="filter" data-filter=".category-3">Послуга 2</li>' +
+        '</ul>' +
     '</div>'
 
 export const model = [
@@ -46,7 +56,6 @@ export const model = [
           height: 'auto',
           'padding': '0px 10px',
           margin: '0px 0px 0px 5vw',
-          //'z-index': '50'
         },
         h1:'SK-Trans',
         p:'Міжрегіональні вантажні перевезення'
@@ -56,24 +65,32 @@ export const model = [
     // ABOUT
     new AboutBlock([
         about_right,
-        //'',
         about_left
-        //'Про компанію Про компанію Про компанію Про компанію Про компанію Про компанію Про компанію',
-        //'SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans '
     ], {
+        tag: 'section',
+        id: 'about',
+        classes: 'bg_light',
+        h2:'Про компанію',
+        p:'SK-Trans',
         // styles: {
         //     'font-size': '2rem',
         //     'text-align': 'center',
         //     padding: '2rem',
         //     color: 'black',
         // },
-        tag: 'section',
-        id: 'about',
-        classes: 'bg_light',
-        h2:'Про компанію',
-        p:'SK-Trans'
     }),
     //ABOUT
+    // PORTFOLIO
+    new PortfolioBlock([
+        portfolio_controls
+    ], {
+        tag: 'section',
+        id: 'portfolio',
+        classes: 'bg_dark',
+        h2:'Компетенції',
+        p:'Наші послуги',
+    }),
+    //PORTFOLIO
 
   // new TitleBlock('SK-Trans', {
   //   tag: 'h1',

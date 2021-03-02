@@ -109,4 +109,8 @@ section h3,
 section .personal_header{
     font-size: 3vh;
 }
+
+/*.s_portfolio .s_descr{*/
+/*    margin-bottom: 7.5vh;*/
+/*}*/
 /*OVERRIDE MAIN.CSS*/

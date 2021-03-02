@@ -37,24 +37,6 @@ export class HeaderBlock extends BlockEXT {
 //HEDER BLOCK
 
 //ABOUT BLOCK
-// export class AboutBlock extends BlockEXT {
-//   constructor(value, options) {
-//     super(value, options)
-//   }
-//   toHTML() {
-//     const {tag = 'div', h2, p, id, classes} = this.options
-//
-//     const cols = this.value.map(col).join('')
-//
-//     const result = row(cols, css(this.options.styles))
-//
-//     return `
-//             <${tag} id="${id}" class="s_${id} ${classes}">
-//                 ${s_header(h2, p)} ${s_content(result)}
-//             </${tag}>`
-//   }
-// }
-
 export class AboutBlock extends BlockEXT {
   constructor(value, options) {
     super(value, options)
@@ -73,5 +55,25 @@ export class AboutBlock extends BlockEXT {
   }
 }
 //ABOUT BLOCK
+
+//PORTFOLIO BLOCK
+export class PortfolioBlock extends BlockEXT {
+  constructor(value, options) {
+    super(value, options)
+  }
+  toHTML() {
+    const {tag = 'div', h2, p, id, classes} = this.options
+
+    const cols = this.value.map(col).join('')
+
+    const result = row(cols, css(this.options.styles))
+
+    return `
+            <${tag} id="${id}" class="s_${id} ${classes}">
+                ${s_header(h2, p)} ${s_content(result)}
+            </${tag}>`
+  }
+}
+//PORTFOLIO BLOCK
 
 //T-ORES ADD FUNCTIONS END
