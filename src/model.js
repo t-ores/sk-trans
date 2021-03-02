@@ -56,7 +56,7 @@ export const model = [
     // ABOUT
     new AboutBlock([
         about_right,
-        '',
+        //'',
         about_left
         //'Про компанію Про компанію Про компанію Про компанію Про компанію Про компанію Про компанію',
         //'SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans SK-Trans '
