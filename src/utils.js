@@ -90,7 +90,28 @@ export function s_header(h2, p) {
 export function s_content(content) {
     return `<div class="section_content">${l_container(content)}</div>`
 }
-// export function s_content(content) {
-//     return `<div class="section_content">${l_c_fluid(content)}</div>`
-// }
+
+//PORTFOLIO
+//#portfolio_grid
+export function portfolio_grid(content){
+    return `<div id="portfolio_grid">${content}</div>`
+}
+
+export function portTest(filters) {
+    const toStr = key => `<li class="filter" data-filter="${key}">${filters[key]}</li>`
+    return Object.keys(filters).map(toStr)
+}
+export function filter_div(filters){
+    let start = `<div class="filter_div control"><ul><li class="filter active" data-filter="all">Всі</li>`
+    let res = portTest(filters)
+    let end = `</ul></div>`
+    return start+res+end
+}
+
+export function portfolio(content,filters){
+    let filtr = filter_div(filters)
+    let result = portfolio_grid(content)
+    return `${s_content(row(filtr+result))}`
+}
+//PORTFOLIO
 //T-ORES ADD FUNCTIONS END

@@ -1,4 +1,22 @@
-import {c_fluid, container, col, css, row, topmenu, toggle_mnu, a, ul_li, logo, div, top_wrapper, div_c, s_header, s_content} from '../utils'
+import {
+  c_fluid,
+  container,
+  col,
+  css,
+  row,
+  topmenu,
+  toggle_mnu,
+  a,
+  ul_li,
+  logo,
+  div,
+  top_wrapper,
+  div_c,
+  s_header,
+  s_content,
+  portfolio,
+  filter_div
+} from '../utils'
 
 class BlockEXT {
   constructor(value, options) {
@@ -43,11 +61,8 @@ export class AboutBlock extends BlockEXT {
   }
   toHTML() {
     const {tag = 'div', h2, p, id, classes} = this.options
-
     const cols = this.value.map(col).join('')
-
     const result = row(cols, css(this.options.styles))
-
     return `
             <${tag} id="${id}" class="s_${id} ${classes}">
                 ${s_header(h2, p)} ${s_content(result)}
@@ -63,14 +78,15 @@ export class PortfolioBlock extends BlockEXT {
   }
   toHTML() {
     const {tag = 'div', h2, p, id, classes} = this.options
-
-    const cols = this.value.map(col).join('')
-
-    const result = row(cols, css(this.options.styles))
-
+    const filters = this.options.filters
+    //console.log(filters)
+    // const cols = this.value.map(col).join(' ')
+    // const result = row(cols, '')
+    let result = this.value
     return `
             <${tag} id="${id}" class="s_${id} ${classes}">
-                ${s_header(h2, p)} ${s_content(result)}
+                ${s_header(h2, p)} 
+                ${portfolio(result, filters)}
             </${tag}>`
   }
 }

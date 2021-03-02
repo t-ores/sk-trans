@@ -1,8 +1,6 @@
 import logo from './assets/img/logo-light.png'
-import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock} from './classes/blocks'
 import {TopMenuBlock, HeaderBlock, AboutBlock, PortfolioBlock} from './classes/blocksExtended'
 
-const text = 'SIMPLE_DUMMY_TEXT_BLOCK'
 const about_right = '<h3>Немного о себе</h3><p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p><p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>'
 const about_left = '<h3>Персональная информация</h3>' +
     '<h2 class="personal_header">Качинський Георгiй Вiталiйович</h2>' +
@@ -23,25 +21,35 @@ const about_left = '<h3>Персональная информация</h3>' +
     '</div>'
 
 const portfolio_controls = '' +
-    '<div class="filter_div controls">' +
-        '<ul>' +
-            '<li class="filter active" data-filter="all">Всі послуги</li>' +
-            '<li class="filter" data-filter=".category-1">Перевезення</li>' +
-            '<li class="filter" data-filter=".category-2">Послуга 1</li>' +
-            '<li class="filter" data-filter=".category-3">Послуга 2</li>' +
-        '</ul>' +
-    '</div>'
+        '<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">' +
+            '<img src="./assets/img/portfolio-images/1.jpg" alt="Alt" />' +
+                '<div class="port_item_cont">' +
+                    '<h3>Заголовок работы</h3>' +
+                    '<p>Описание работы</p>' +
+                    '<a href="#" class="popup_content">Посмотреть</a>' +
+                '</div>' +
+                '<div class="hidden">' +
+                    '<div class="podrt_descr">' +
+                        '<div class="modal-box-content">' +
+                            '<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>' +
+                            '<h3>Заголовок работы</h3>' +
+                            '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum cupiditate, dignissimos quo. Dolore, omnis totam quibusdam voluptatibus cum, nulla dolores sunt iste? Sunt nam illum, animi magni veniam adipisci non.</p>' +
+                            '<img src="./assets/img/portfolio-images/1.jpg" alt="Alt" />' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>'
 
 export const model = [
-  // MENU
+// MENU
     new TopMenuBlock([
       'About',
-      'Menu 2',
-      'Menu 3'
+      'Portfolio',
+      'Contacts'
     ]),
-  // MENU
+// MENU
 
-  //HEADER
+//HEADER
   new HeaderBlock(
       logo,
       {
@@ -60,9 +68,9 @@ export const model = [
         h1:'SK-Trans',
         p:'Міжрегіональні вантажні перевезення'
       }),
-  //HEADER
+//HEADER
 
-    // ABOUT
+// ABOUT
     new AboutBlock([
         about_right,
         about_left
@@ -72,15 +80,10 @@ export const model = [
         classes: 'bg_light',
         h2:'Про компанію',
         p:'SK-Trans',
-        // styles: {
-        //     'font-size': '2rem',
-        //     'text-align': 'center',
-        //     padding: '2rem',
-        //     color: 'black',
-        // },
     }),
-    //ABOUT
-    // PORTFOLIO
+//ABOUT
+
+// PORTFOLIO
     new PortfolioBlock([
         portfolio_controls
     ], {
@@ -89,69 +92,11 @@ export const model = [
         classes: 'bg_dark',
         h2:'Компетенції',
         p:'Наші послуги',
+        filters:{
+            '.category-1':'Послуга 1',
+            '.category-2':'Послуга 2'
+        }
     }),
-    //PORTFOLIO
-
-  // new TitleBlock('SK-Trans', {
-  //   tag: 'h1',
-  //   styles: {
-  //     color: 'black',
-  //     padding: '1.5rem',
-  //     'text-align': 'center',
-  //     'padding-bottom': '0vh'
-  //   }
-  // }),
-  // new TitleBlock('Про компанію', {
-  //   tag: 'h4',
-  //   styles: {
-  //     color: 'black',
-  //     padding: '0',
-  //     'text-align': 'center',
-  //     'min-height': '800px'
-  //   }
-  // }),
-
-  // new ColumnsBlock([
-  //   'Приложение на чистом JavaScript, без использования библиотек',
-  //   'JavaScript - это просто, интересно. Научись создавать любые UI своими руками'
-  // ], {
-  //   styles: {
-  //     'font-size': '2rem',
-  //     'text-align': 'center',
-  //     padding: '2rem',
-  //     color: 'black',
-  //     'font-weight': 'bold'
-  //   }
-  // }),
-  // new ColumnsBlock([
-  //   'Приложение на чистом JavaScript, без использования библиотек',
-  //   'Узнаешь как работают принципы SOLID и ООП в JavaScript за один курс',
-  //   'JavaScript - это просто, интересно. Научись создавать любые UI своими руками'
-  // ], {
-  //   styles: {
-  //     padding: '2rem',
-  //     color: 'black',
-  //     'font-weight': 'bold'
-  //   }
-  // }),
-  // new TextBlock(text, {
-  //   styles: {
-  //     padding: '1rem',
-  //     'font-weight': 'bold'
-  //   }
-  // }),
-
-  // new ImageBlock(image, {
-  //   styles: {
-  //     padding: '2rem 0',
-  //     display: 'flex',
-  //     'justify-content': 'center'
-  //   },
-  //   imageStyles: {
-  //     width: '500px',
-  //     height: 'auto'
-  //   },
-  //   alt: 'Это картинка'
-  // }),
+//PORTFOLIO
 
 ]

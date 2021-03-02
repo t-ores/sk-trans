@@ -1,12 +1,48 @@
 import background from '../img/bg.jpg'
-//import background_m from '../img/bg-mobile-2.jpg'
 import background_m from '../img/bg-mobile-4.jpg'
+//require('magnific-popup')
+import 'magnific-popup'
+var mixItUp = require('mixitup')
+//import 'mixitup'
 
-$(document).ready(function() {
+$(document).ready(function($) {
+
+	//PORTFOLIO
+	//$("#portfolio_grid").mixItUp();
+	//mixItUp('#portfolio_grid')
+	mixItUp('#portfolio_grid', {
+		selectors: {
+			target: '.portfolio_item'
+		},
+		animation: {
+			duration: 300
+		}
+	})
+
+	// var mixer = mixitup(containerEl, {
+	// 	selectors: {
+	// 		target: '.blog-item'
+	// 	},
+	// 	animation: {
+	// 		duration: 300
+	// 	}
+	// });
+
+	$(".s_portfolio li").click(function() {
+		$(".s_portfolio li").removeClass("active");
+		$(this).addClass("active");
+	});
+
+	// $(".popup").magnificPopup({type:"image"});
+	// $(".popup_content").magnificPopup({
+	// 	type:"inline",
+	// 	midClick: true
+	// });
+	//PORTFOLIO
 
 	function heightDetect() {
-		$("#header").css("height", $(window).height());
-		$("section").css("height", $(window).height());
+		$("#header").css("min-height", $(window).height());
+		$("section").css("min-height", $(window).height());
 	}
 	heightDetect();
 	$(window).resize(function() {
