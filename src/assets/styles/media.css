@@ -90,7 +90,7 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 	.s_descr_wrap .s_descr{
-		font-size: 2vh;
+		/*font-size: 2vh;*/
 		margin-bottom: 3.5vh;
 	}
 	section h2{

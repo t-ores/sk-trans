@@ -92,13 +92,6 @@ export const model = [
             h3:'Заголовок послуги 2',
             p:'Опис послуги',
             desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum cupiditate, dignissimos quo. Dolore, omnis totam quibusdam voluptatibus cum, nulla dolores sunt iste? Sunt nam illum, animi magni veniam adipisci non.'
-        },
-        item3:{
-            category:'category-1',
-            img:'./assets/img/portfolio-images/3.jpg',
-            h3:'Заголовок послуги 3',
-            p:'Опис послуги',
-            desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum cupiditate, dignissimos quo. Dolore, omnis totam quibusdam voluptatibus cum, nulla dolores sunt iste? Sunt nam illum, animi magni veniam adipisci non.'
         }
 },
 {
@@ -118,8 +111,8 @@ export const model = [
 
 //CONTACTS
 new ContactBlock({
-        address:'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.',
-        phone:'+7 999 999 99 99',
+        address:'м.Луцьк, вул.Запорізька, 37',
+        phone:'+380 97 919 59 15',
         website:'sk-trans.com.ua'
     },
     {

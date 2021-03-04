@@ -19,15 +19,6 @@ $(document).ready(function($) {
 		heightDetect();
 	});
 
-	//animation
-	//$(".section_header").animated("fadeInUp", "fadeOutDown");
-	// $(".animation_1").animated("flipInY", "fadeOutDown");
-	// $(".animation_2").animated("fadeInLeft", "fadeOutDown");
-	// $(".animation_3").animated("fadeInRight", "fadeOutDown");
-	// $(".left .resume_item").animated("fadeInLeft", "fadeOutDown");
-	// $(".right .resume_item").animated("fadeInRight", "fadeOutDown");
-	//animation
-
 	$(".toggle_mnu").click(function() {
 		$(".sandwich").toggleClass("active");
 	});
@@ -53,8 +44,6 @@ $(document).ready(function($) {
 	let nav = $("nav.top_mnu")
 	$("header.main_head>div>div>div").append(nav)
 
-
-
 	if($(window).width() > 980){
 		$('.main_head').parallax({
 			imageSrc: background,
@@ -71,7 +60,6 @@ $(document).ready(function($) {
 			imageSrc: background_m,
 		});
 	}
-
 
 	$('.logo_container').click(function (){
 		window.location.href = "/";

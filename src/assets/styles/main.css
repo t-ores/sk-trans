@@ -284,7 +284,7 @@ svg path {
 
 .main_footer {
   padding: 50px 0;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 300; }
   .main_footer .social_wrap {
     float: right;
@@ -378,7 +378,8 @@ svg path {
   margin-bottom: 50px; }
 
 .portfolio_item {
-  display: none;
+  /*display: none;*/
+  display: inline-block;
   padding: 0; }
   .portfolio_item img {
     width: 100%; }

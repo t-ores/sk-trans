@@ -123,49 +123,70 @@ export function about_s_content(val_right, val_left) {
 
 
 //PORTFOLIO
+// export function portf_items(content){
+//     const toStr = key => `
+//                 <div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item ${content[key].category}">
+//                     <img src="${content[key].img}" alt="${content[key].h3}" />
+//                     <div class="port_item_cont">
+//                         <h3>${content[key].h3}</h3>
+//                         <p>${content[key].p}</p>
+//                         <a href="#" class="popup_content">Посмотреть</a>
+//                     </div>
+//                     <div class="hidden">
+//                         <div class="podrt_descr">
+//                             <div class="modal-box-content">
+//                                 <button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
+//                                 <h3>${content[key].h3}</h3>
+//                                 <p>${content[key].desc}</p>
+//                                 <img src="./assets/img/portfolio-images/${content[key].img}" alt="${content[key].h3}" />
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>`
+//     return Object.keys(content).map(toStr).join(' ')
+// }
 export function portf_items(content){
     const toStr = key => `
-                <div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item ${content[key].category}">
+                <div class="mix col-md-3 col-sm-6 col-xs-12 ${content[key].category}">
                     <img src="${content[key].img}" alt="${content[key].h3}" />
                     <div class="port_item_cont">
                         <h3>${content[key].h3}</h3>
                         <p>${content[key].p}</p>
                         <a href="#" class="popup_content">Посмотреть</a>
                     </div>
-                    <div class="hidden">
+                    <div class="mfp-hide">
                         <div class="podrt_descr">
                             <div class="modal-box-content">
                                 <button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
                                 <h3>${content[key].h3}</h3>
                                 <p>${content[key].desc}</p>
-                                <img src="./assets/img/portfolio-images/${content[key].img}" alt="${content[key].h3}" />
+                                <img src="${content[key].img}" alt="${content[key].h3}" />
                             </div>
                         </div>
                     </div>
                 </div>`
     return Object.keys(content).map(toStr).join(' ')
-
-}
-//#portfolio_grid
-export function portfolio_grid(content){
-    return `<div id="portfolio_grid">${content}</div>`
 }
 
-export function portTest(filters) {
+export function portfolio_s_content(content, filters){
     const toStr = key => `<li class="filter" data-filter="${key}">${filters[key]}</li>`
-    return Object.keys(filters).map(toStr).join(' ')
-}
-export function filter_div(filters){
-    let start = `<div class="filter_div control"><ul><li class="filter active" data-filter="all">Всі</li>`
-    let res = portTest(filters)
-    let end = `</ul></div>`
-    return start+res+end
-}
 
-export function portfolio(content,filters){
-    let filtr = filter_div(filters)
-    let result = portfolio_grid(portf_items(content))
-    return `${s_content(row(filtr+result))}`
+    return `
+<div class="section_content">
+    <div class="container">
+        <div class="row">
+            <div class="filter_div control">
+                <ul>
+                    <li class="filter active" data-filter="all">Всі</li>
+                    ${Object.keys(filters).map(toStr).join(' ')}
+                </ul>
+            </div>
+            <div id="portfolio_grid">
+                ${portf_items(content)}
+            </div>
+        </div>
+    </div>
+</div>`
 }
 //PORTFOLIO
 
