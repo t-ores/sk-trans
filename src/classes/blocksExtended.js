@@ -15,7 +15,10 @@ import {
   s_header,
   s_content,
   portfolio,
-  filter_div, about_s_content
+  filter_div,
+  about_s_content,
+  contacts_s_content,
+  footer_s_content
 } from '../utils'
 
 class BlockEXT {
@@ -81,7 +84,7 @@ export class PortfolioBlock extends BlockEXT {
     const {tag = 'div', h2, p, id, classes} = this.options
     const filters = this.options.filters
     let content = this.value
-    console.log(content)
+    //console.log(content)
     return `
             <${tag} id="${id}" class="s_${id} ${classes}">
                 ${s_header(h2, p)} 
@@ -90,5 +93,38 @@ export class PortfolioBlock extends BlockEXT {
   }
 }
 //PORTFOLIO BLOCK
+
+
+//ABOUT BLOCK
+export class ContactBlock extends BlockEXT {
+  constructor(value, options) {
+    super(value, options)
+  }
+  toHTML() {
+    const {tag = 'div', h2, p, id, classes} = this.options
+    return `
+            <${tag} id="${id}" class="s_${id} ${classes}">
+                ${s_header(h2, p)} 
+                ${contacts_s_content(this.value)}
+            </${tag}>`
+  }
+}
+//ABOUT BLOCK
+
+//FOOTER
+export class FooterBlock extends BlockEXT {
+  constructor(value, options) {
+    super(value, options)
+  }
+  toHTML() {
+    const {tag = 'div',id, classes} = this.options
+    return `
+            <${tag} id="${id}" class="main_${id} ${classes}">
+                ${footer_s_content(this.value)}
+            </${tag}>`
+  }
+}
+//FOOTER
+
 
 //T-ORES ADD FUNCTIONS END

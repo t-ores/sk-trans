@@ -435,8 +435,10 @@ svg path {
   .contact_box h3 {
     text-align: left;
     color: #000;
-    margin-bottom: 0px;
-    font-size: 14px; }
+    margin-bottom: 0;
+    font-size: 14px;
+    margin-top: 0;
+  }
   .contact_box .contacts_icon {
     font-size: 30px; }
   .contact_box p {

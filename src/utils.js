@@ -168,4 +168,75 @@ export function portfolio(content,filters){
     return `${s_content(row(filtr+result))}`
 }
 //PORTFOLIO
+
+
+//СONTACTS
+export function contacts_s_content(content) {
+    return `
+<div class="section_content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="contact_box">
+                    <div class="contacts_icon icon-basic-geolocalize-05"></div>
+                    <h3>Адрес:</h3>
+                    <p>${content.address}</p>
+                </div>
+                <div class="contact_box">
+                    <div class="contacts_icon icon-basic-smartphone"></div>
+                    <h3>Телефон:</h3>
+                    <p>${content.phone}</p>
+                </div>
+                <div class="contact_box">
+                    <div class="contacts_icon icon-basic-webpage-img-txt"></div>
+                    <h3>Веб-сайт:</h3>
+                    <p><a href="//${content.website}" target="_blank">${content.website}</a></p>
+                </div>
+            </div>
+            
+            <div class="col-sm">
+                <form action="https://formspree.io/f/mvovjyvd" class="main_form" novalidate="" target="_blank" method="post" id="my-form">
+                    <label class="form-group">
+                        <span class="color_element">*</span> Ваше имя:
+                        <input type="text" name="name" placeholder="Ваше имя" data-validation-required-message="Вы не ввели имя" required="" aria-invalid="false">
+                        <span class="help-block text-danger"></span>
+                    </label>
+                    <label class="form-group">
+                        <span class="color_element">*</span> Ваш E-mail:
+                        <input type="email" name="email" placeholder="Ваш E-mail" data-validation-required-message="Не корректно введен E-mail" required="">
+                        <span class="help-block text-danger"></span>
+                    </label>
+                    <label class="form-group">
+                        <span class="color_element">*</span> Ваше сообщение:
+                        <textarea name="message" placeholder="Ваше сообщение" data-validation-required-message="Вы не ввели сообщение" required=""></textarea>
+                        <span class="help-block text-danger"></span>
+                    </label>
+                    <button>Отправить</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>`
+}
+//СONTACTS
+
+export function footer_s_content(content) {
+    let socials = key => `<li><a href="${content.socials[key]}" target="_blank"><i class="fa fa-${key}"></i></a></li>`
+    return `
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    &copy; ${content.copyright}
+                    <div class="social_wrap">
+                        <ul>
+                            ${Object.keys(content.socials).map(socials).join(' ')}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `
+}
+
 //T-ORES ADD FUNCTIONS END

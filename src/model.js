@@ -1,5 +1,12 @@
 import logo from './assets/img/logo-light.png'
-import {TopMenuBlock, HeaderBlock, AboutBlock, PortfolioBlock} from './classes/blocksExtended'
+import {
+    TopMenuBlock,
+    HeaderBlock,
+    AboutBlock,
+    PortfolioBlock,
+    ContactBlock,
+    FooterBlock
+} from './classes/blocksExtended'
 
 export const model = [
 // MENU
@@ -42,7 +49,7 @@ export const model = [
                 ],
             },
         about_left:{
-            h3:'Персональная информация',
+            h3: 'Персональная информация',
             h2:'Качинський Георгiй Вiталiйович',
             ul:{
                 li_head:'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.',
@@ -110,33 +117,35 @@ export const model = [
 
 
 //CONTACTS
-new AboutBlock({
-        about_left:{
-            h3:'Персональная информация',
-            h2:'Качинський Георгiй Вiталiйович',
-            ul:{
-                li_head:'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.',
-                birth:'День рождения: 3 июня 1988 года',
-                phone:'Номер телефона: +7 999 999 99 99',
-                email:'E-mail: <a href="mailto:youmail@mail.ru">youmail@mail.ru</a>',
-                website:'Веб-сайт: <a href="//webdesign-master.ru" target="_blank">sk-trans.com.ua</a>'
-            },
-            socials:{
-                'twitter':'https://twitter.com/',
-                'facebook':'https://www.facebook.com/',
-                'vk':'http://vk.com/',
-                'github':'https://github.com/'
-            }
-        }
-    }
-    , {
+new ContactBlock({
+        address:'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.',
+        phone:'+7 999 999 99 99',
+        website:'sk-trans.com.ua'
+    },
+    {
         tag: 'section',
-        id: 'about',
+        id: 'contacts',
         classes: 'bg_light',
-        h2:'Про компанію',
-        p:'SK-Trans',
+        h2:'Контакти',
+        p:'Напишіть нам',
 
     }),
 //CONTACTS
 
+//FOOTER
+new FooterBlock({
+    copyright: '2021 SK-Trans',
+    socials:{
+        'twitter':'https://twitter.com/',
+        'facebook':'https://www.facebook.com/',
+        'vk':'http://vk.com/',
+        'github':'https://github.com/'
+    }
+},
+    {
+        tag: 'footer',
+        id: 'footer',
+        classes: 'bg_dark',
+    })
+//FOOTER
 ]

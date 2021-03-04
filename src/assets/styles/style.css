@@ -110,7 +110,22 @@ section .personal_header{
     font-size: 3vh;
 }
 
+#contacts > div.section_header > div > div{
+    margin-bottom: 130px;
+}
+
+.main_footer .social_wrap li{
+    font-size: 3vh !important;
+    padding: 0 10px;
+}
 /*.s_portfolio .s_descr{*/
 /*    margin-bottom: 7.5vh;*/
 /*}*/
 /*OVERRIDE MAIN.CSS*/
+
+/*.bg-dark{*/
+/*    background-color: rgba(0 10 10 1) !important;*/
+/*}*/
+.bg_skt_dark{
+    background-color: rgba(0, 10, 10, 1);
+}
