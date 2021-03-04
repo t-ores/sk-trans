@@ -1,41 +1,18 @@
 import background from '../img/bg.jpg'
 import background_m from '../img/bg-mobile-4.jpg'
 
-var mixItUp = require('mixitup')
-
-//var $ = require("jquery"); // must be required first to install the global jQuery/$ variable
-require("magnific-popup"); // add the .magnificPopup function to $
-
 $(document).ready(function($) {
 
 	//PORTFOLIO
-	//$("#portfolio_grid").mixItUp();
-	//mixItUp('#portfolio_grid')
-	// mixItUp('#portfolio_grid', {
-	// 	selectors: {
-	// 		target: '.portfolio_item'
-	// 	},
-	// 	animation: {
-	// 		duration: 300
-	// 	}
-	// })
-
 	$(".s_portfolio li").click(function() {
 		$(".s_portfolio li").removeClass("active");
 		$(this).addClass("active");
 	});
-
-	// $.magnificPopup.open({type:"image"})
-	// $(".popup").magnificPopup({type:"image"});
-	// $(".popup_content").magnificPopup({
-	// 	type:"inline",
-	// 	midClick: true
-	// });
 	//PORTFOLIO
 
 	function heightDetect() {
 		$("#header").css("min-height", $(window).height());
-		$("section").css("min-height", $(window).height());
+		//$("section").css("min-height", $(window).height());
 	}
 	heightDetect();
 	$(window).resize(function() {
@@ -99,9 +76,9 @@ $(document).ready(function($) {
 	$('.logo_container').click(function (){
 		window.location.href = "/";
 	})
-	// $('.logo_container>img').hover(function (){
-	// 	this.css('cursor', 'pointer');
-	// })
+	$('.logo_container>img').hover(function (){
+		$(this).css('cursor', 'pointer');
+	})
 
 	$(".top_mnu ul a").mPageScroll2id();
 
