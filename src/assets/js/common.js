@@ -1,38 +1,31 @@
 import background from '../img/bg.jpg'
 import background_m from '../img/bg-mobile-4.jpg'
-//require('magnific-popup')
-import 'magnific-popup'
+
 var mixItUp = require('mixitup')
-//import 'mixitup'
+
+//var $ = require("jquery"); // must be required first to install the global jQuery/$ variable
+require("magnific-popup"); // add the .magnificPopup function to $
 
 $(document).ready(function($) {
 
 	//PORTFOLIO
 	//$("#portfolio_grid").mixItUp();
 	//mixItUp('#portfolio_grid')
-	mixItUp('#portfolio_grid', {
-		selectors: {
-			target: '.portfolio_item'
-		},
-		animation: {
-			duration: 300
-		}
-	})
-
-	// var mixer = mixitup(containerEl, {
+	// mixItUp('#portfolio_grid', {
 	// 	selectors: {
-	// 		target: '.blog-item'
+	// 		target: '.portfolio_item'
 	// 	},
 	// 	animation: {
 	// 		duration: 300
 	// 	}
-	// });
+	// })
 
 	$(".s_portfolio li").click(function() {
 		$(".s_portfolio li").removeClass("active");
 		$(this).addClass("active");
 	});
 
+	// $.magnificPopup.open({type:"image"})
 	// $(".popup").magnificPopup({type:"image"});
 	// $(".popup_content").magnificPopup({
 	// 	type:"inline",

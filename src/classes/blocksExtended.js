@@ -15,7 +15,7 @@ import {
   s_header,
   s_content,
   portfolio,
-  filter_div
+  filter_div, about_s_content
 } from '../utils'
 
 class BlockEXT {
@@ -61,11 +61,12 @@ export class AboutBlock extends BlockEXT {
   }
   toHTML() {
     const {tag = 'div', h2, p, id, classes} = this.options
-    const cols = this.value.map(col).join('')
-    const result = row(cols, css(this.options.styles))
+    const val_right = this.value.about_right
+    const val_left = this.value.about_left
     return `
             <${tag} id="${id}" class="s_${id} ${classes}">
-                ${s_header(h2, p)} ${s_content(result)}
+                ${s_header(h2, p)} 
+                ${about_s_content(val_right, val_left)}
             </${tag}>`
   }
 }
@@ -79,14 +80,12 @@ export class PortfolioBlock extends BlockEXT {
   toHTML() {
     const {tag = 'div', h2, p, id, classes} = this.options
     const filters = this.options.filters
-    //console.log(filters)
-    // const cols = this.value.map(col).join(' ')
-    // const result = row(cols, '')
-    let result = this.value
+    let content = this.value
+    console.log(content)
     return `
             <${tag} id="${id}" class="s_${id} ${classes}">
                 ${s_header(h2, p)} 
-                ${portfolio(result, filters)}
+                ${portfolio(content, filters)}
             </${tag}>`
   }
 }
