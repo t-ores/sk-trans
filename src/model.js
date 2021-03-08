@@ -1,4 +1,6 @@
 import logo from './assets/img/logo-light.png'
+import p_img_1 from './assets/img/portfolio-images/1.jpg'
+import p_img_2 from './assets/img/portfolio-images/2.jpg'
 import {
     TopMenuBlock,
     HeaderBlock,
@@ -78,22 +80,29 @@ export const model = [
 
 // PORTFOLIO
     new PortfolioBlock(
-{
-        item1:{
-            category:'category-1',
-            img:'./assets/img/portfolio-images/1.jpg',
+[
+        {
+            category:'p_item category-0',
+            img:p_img_1,
+            h3:'Заголовок послуги 0',
+            p:'Опис послуги',
+            desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum cupiditate, dignissimos quo. Dolore, omnis totam quibusdam voluptatibus cum, nulla dolores sunt iste? Sunt nam illum, animi magni veniam adipisci non.'
+        },
+        {
+            category:'p_item category-1',
+            img:p_img_1,
             h3:'Заголовок послуги 1',
             p:'Опис послуги',
             desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum cupiditate, dignissimos quo. Dolore, omnis totam quibusdam voluptatibus cum, nulla dolores sunt iste? Sunt nam illum, animi magni veniam adipisci non.'
         },
-        item2:{
-            category:'category-2',
-            img:'./assets/img/portfolio-images/2.jpg',
+        {
+            category:'p_item category-2',
+            img:p_img_2,
             h3:'Заголовок послуги 2',
             p:'Опис послуги',
             desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum cupiditate, dignissimos quo. Dolore, omnis totam quibusdam voluptatibus cum, nulla dolores sunt iste? Sunt nam illum, animi magni veniam adipisci non.'
         }
-},
+],
 {
         tag: 'section',
         id: 'portfolio',

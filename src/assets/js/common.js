@@ -8,6 +8,11 @@ $(document).ready(function($) {
 		$(".s_portfolio li").removeClass("active");
 		$(this).addClass("active");
 	});
+
+	$(".p_item").each(function(i) {
+		$(this).find("a").attr("href", "#work_" + i);
+		$(this).find(".podrt_descr").attr("id", "work_" + i);
+	});
 	//PORTFOLIO
 
 	function heightDetect() {
@@ -33,11 +38,11 @@ $(document).ready(function($) {
 		if ($(".top_mnu").is(":visible")) {
 			$(".top_text").css("opacity", "1");
 			$(".top_mnu").fadeOut(600);
-			$(".top_mnu li a").removeClass("fadeInUp animated");
+			$(".top_mnu li a").removeClass("animate__animated animate__fadeInUp");
 		} else {
 			$(".top_text").css("opacity", ".1");
 			$(".top_mnu").fadeIn(600);
-			$(".top_mnu li a").addClass("fadeInUp animated");
+			$(".top_mnu li a").addClass("animate__animated animate__fadeInUp");
 		}
 	});
 

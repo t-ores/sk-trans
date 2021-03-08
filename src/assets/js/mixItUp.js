@@ -4,13 +4,13 @@ var mixItUp = require('mixitup')
 
 $(document).ready(function($) {
     //$("#portfolio_grid").mixItUp();
-    mixItUp('#portfolio_grid')
-    // mixItUp('#portfolio_grid', {
-    // 	selectors: {
-    // 		target: '.portfolio_item'
-    // 	},
-    // 	animation: {
-    // 		duration: 300
-    // 	}
-    // })
+    //mixItUp('#portfolio_grid')
+    mixItUp('#portfolio_grid', {
+    	selectors: {
+    		target: '.p_item'
+    	},
+    	animation: {
+    		duration: 300
+    	}
+    })
 });
