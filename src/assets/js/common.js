@@ -73,6 +73,8 @@ $(document).ready(function($) {
 		$(this).css('cursor', 'pointer');
 	})
 
+	$("input, select, textarea").jqBootstrapValidation();
+
 	$(".top_mnu ul a").mPageScroll2id();
 
 });
@@ -80,4 +82,9 @@ $(document).ready(function($) {
 $(window).on('load', function (){
 	$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");
+
+	$(".top_text h1").addClass("animate__animated animate__fadeInDown");
+	$(".top_text p").addClass("animate__animated animate__fadeInUp");
+
+	$('.filter_div li.active').click()
 })

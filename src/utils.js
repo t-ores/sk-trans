@@ -147,7 +147,7 @@ export function about_s_content(val_right, val_left) {
 // }
 export function portf_items(content){
     const toStr = key => `
-                <div class="mix col-md-6 col-sm-6 col-xs-12 ${content[key].category}">
+                <div class="mix col-sm ${content[key].category}">
                     <img src="${content[key].img}" alt="${content[key].h3}" />
                     <div class="port_item_cont">
                         <h3>${content[key].h3}</h3>
@@ -177,7 +177,7 @@ export function portfolio_s_content(content, filters){
         <div class="row">
             <div class="filter_div control">
                 <ul>
-                    <li class="filter active" data-filter="all">Всі</li>
+                    <li class="filter active" data-filter=".category-0">Послуга 0</li>
                     ${Object.keys(filters).map(toStr).join(' ')}
                 </ul>
             </div>

@@ -65,10 +65,7 @@ section {
 .main_head {
   min-height: 480px;
   padding-top: 20px;
-  background-color: rgba(11, 44, 56, 0.8) !important;
-}
-.parallax-mirror{
-
+  background-color:rgba(11, 44, 56, 0.8) !important;
 }
 .loader {
   background: none repeat scroll 0 0 #ffffff;
@@ -84,7 +81,7 @@ section {
     background-image: url("../img/preloader.gif");
     background-size: cover;
     background-repeat: no-repeat;
-    background-posirion: center center;
+    background-position: center center;
     background-color: #fff;
     height: 60px;
     width: 60px;
