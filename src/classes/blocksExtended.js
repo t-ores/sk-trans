@@ -28,7 +28,7 @@ class BlockEXT {
     this.options = options
   }
   toHTML() {
-    throw new Error('Метод toHTML должен быть реализован')
+    throw new Error('Метод toHTML повинен бути реалізований...')
   }
 }
 
@@ -96,7 +96,7 @@ export class PortfolioBlock extends BlockEXT {
 // PORTFOLIO BLOCK
 
 
-//ABOUT BLOCK
+//CONTACT BLOCK
 export class ContactBlock extends BlockEXT {
   constructor(value, options) {
     super(value, options)
@@ -110,9 +110,9 @@ export class ContactBlock extends BlockEXT {
             </${tag}>`
   }
 }
-//ABOUT BLOCK
+//CONTACT BLOCK
 
-//FOOTER
+//FOOTER BLOCK
 export class FooterBlock extends BlockEXT {
   constructor(value, options) {
     super(value, options)
@@ -125,7 +125,6 @@ export class FooterBlock extends BlockEXT {
             </${tag}>`
   }
 }
-//FOOTER
-
+//FOOTER BLOCK
 
 //T-ORES ADD FUNCTIONS END

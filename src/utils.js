@@ -147,12 +147,16 @@ export function about_s_content(val_right, val_left) {
 // }
 export function portf_items(content){
     const toStr = key => `
-                <div class="mix col-sm ${content[key].category}">
-                    <img src="${content[key].img}" alt="${content[key].h3}" />
+                <div class="mix col-md-12 col-sm-12 col-xs-12 ${content[key].category}">
+
+                    <div class="p_block_inf">
+                        <img src="${content[key].img}" alt="${content[key].h3}" />
+                    </div>
+                    
                     <div class="port_item_cont">
                         <h3>${content[key].h3}</h3>
                         <p>${content[key].p}</p>
-                        <a href="#" class="popup_content">Посмотреть</a>
+                        <a href="#" class="popup_content">Більше...</a>
                     </div>
                     <div class="mfp-hide">
                         <div class="podrt_descr">
@@ -173,11 +177,11 @@ export function portfolio_s_content(content, filters){
 
     return `
 <div class="section_content">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="filter_div control">
                 <ul>
-                    <li class="filter active" data-filter=".category-0">Послуга 0</li>
+                    <li class="filter active" data-filter=".category-0">ПЕРЕВЕЗТИ МЕБЕЛЬ, ЛИЧНЫЕ ВЕЩИ</li>
                     ${Object.keys(filters).map(toStr).join(' ')}
                 </ul>
             </div>

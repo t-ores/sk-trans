@@ -27,7 +27,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "classes": "^0.3.0",
-    "firebase": "^8.2.9",
+    "firebase": "^8.2.10",
     "jquery": "^3.5.1",
     "jquery-parallax.js": "^1.5.0",
     "magnific-popup": "^1.1.0",

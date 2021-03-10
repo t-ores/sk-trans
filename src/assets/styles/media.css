@@ -2,16 +2,16 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-	/*.s_about p{*/
-	/*	font-size: 2vh;*/
-	/*}*/
+
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	/*.s_about p{*/
-	/*	font-size: 2vh;*/
-	/*}*/
+	.s_portfolio li{
+		font-size: 2rem;
+		margin: 0 auto;
+		letter-spacing: .3vh;
+	}
 	.logo_container>img{
 		width: 200px !important;
 		z-index: 100 !important;
@@ -27,6 +27,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.s_portfolio li{
+		font-size: 2.3rem;
+	}
 	.social_wrap li{
 		padding: 0 2vh;
 	}
@@ -39,14 +42,16 @@
 	.resume_container .left h3 {
 		margin-top: 0;
 	}
-
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-	/*.top_wrapper .top_descr .top_centered{*/
-	/*	background-color: rgba(11,44,56,.8);*/
-	/*}*/
+	.s_portfolio li{
+		font-size: 2.3rem;
+	}
+	.s_portfolio .s_descr{
+		margin-bottom: 4.5vh;
+	}
 	.top_wrapper .top_text h1 {
 		font-size: 2em;
 		padding-left: 10px;
@@ -67,16 +72,43 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+	.s_portfolio li{
+		font-size: 2.3rem;
+	}
 	.main_head{
 		background-color: rgba(11, 44, 56, 0.8) !important;
 	}
-}
 
+}
 
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
+	.top_mnu ul{
+		margin-top: 25vh;
+	}
+	.s_portfolio ul{
+		display: flex;
+	}
+	.p_item .port_item_cont{
+		padding-top: 10vh;
+	}
+	.s_portfolio li{
+		font-size:1.7vh;
+		letter-spacing: .01vh;
+	}
+	.p_item h3{
+		font-size: 2vh;
+	}
+	.p_item p{
+		color: #999;
+		font-size: 1.5vh;
+	}
+
+}
+
+@media only screen and (min-width: 425px){
 
 }
 
@@ -89,9 +121,10 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+
 	.s_descr_wrap .s_descr{
-		/*font-size: 2vh;*/
-		margin-bottom: 3.5vh;
+		font-size: 2vh;
+		/* margin-bottom: 3.5vh; */
 	}
 	section h2{
 		font-size: 3vh;
@@ -107,14 +140,9 @@
 	}
 	.social_wrap li{
 		padding: 0;
-		margin: auto;
-	}
-
-	.s_portfolio .s_descr{
-		margin-bottom: 7.5vh;
+		margin: auto;	
 	}
 }
-
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 
@@ -122,5 +150,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+
+}
+
+@media only screen and (min-width: 1440px){
 
 }

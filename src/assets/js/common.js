@@ -17,7 +17,7 @@ $(document).ready(function($) {
 
 	function heightDetect() {
 		$("#header").css("min-height", $(window).height());
-		//$("section").css("min-height", $(window).height());
+		// $("section").css("min-height", $(window).height());
 	}
 	heightDetect();
 	$(window).resize(function() {

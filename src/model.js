@@ -1,5 +1,5 @@
 import logo from './assets/img/logo-light.png'
-import p_img_1 from './assets/img/portfolio-images/1.jpg'
+import p_img_1 from './assets/img/portfolio-images/7.jpg'
 import p_img_2 from './assets/img/portfolio-images/2.jpg'
 import {
     TopMenuBlock,
@@ -36,7 +36,7 @@ export const model = [
           margin: '0px 0px 0px 5vw',
         },
         h1:'SK-Trans',
-        p:'Міжрегіональні вантажні перевезення'
+        p:'Вантажні перевезення по Україні'
       }),
 //HEADER
 
@@ -84,9 +84,13 @@ export const model = [
         {
             category:'p_item category-0',
             img:p_img_1,
-            h3:'Заголовок послуги 0',
-            p:'Опис послуги',
-            desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum cupiditate, dignissimos quo. Dolore, omnis totam quibusdam voluptatibus cum, nulla dolores sunt iste? Sunt nam illum, animi magni veniam adipisci non.'
+            h3:'ПЕРЕВЕЗТИ МЕБЕЛЬ, ЛИЧНЫЕ ВЕЩИ',
+            p:'Междугородние грузоперевозки.  Организуем домашний переезд или быструю доставку груза  по всей територии Украины.',
+            desc:'<b>Как происходит процес перевозки:</b></br>' +
+                'С логистом нужно согласовать время загрузки, выгрузки, количество груза испособ оплаты. После загрузки автомобиль сразу выезжает по маршруту, Вы держите связь с водителем и с логистом.</br>' +
+                '<b>Просчет стоимости, резерв машины</b><br>' +
+                'Исходя от объёма груза, логист подбирет грузовой автомобиль, озвучит стоимость и время доставки. Оптимально за 1-2 дня до перевозки подвердите заказ, но мы готовы выполнить работу и "з сегодня на сегодня"( машин много).  Для резерва автомобиля логист может выставить счет на частичную предоплату. \n' +
+                'В случае отказа от перевозки по вине заказчика, предоплата за бронь авто не возвращается'
         },
         {
             category:'p_item category-1',
@@ -106,7 +110,7 @@ export const model = [
 {
         tag: 'section',
         id: 'portfolio',
-        classes: 'bg_dark',
+        classes: 'bg_light',
         h2:'Компетенції',
         p:'Наші послуги',
         filters:{

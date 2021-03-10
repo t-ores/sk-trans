@@ -167,10 +167,19 @@ section .personal_header{
         display: inline-block;
     } */
 
-    div.p_item > img{
-        max-width: 400px;
+    div.p_item img{
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     #portfolio_grid{
         position: relative;
+    }
+
+    .s_portfolio li.active{
+        color: black;
+    }
+
+    .p_block_inf{
+        display: flex;
     }
