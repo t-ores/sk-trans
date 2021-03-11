@@ -13,7 +13,7 @@
 		letter-spacing: .3vh;
 	}
 	.logo_container>img{
-		width: 200px !important;
+		width: 100px !important;
 		z-index: 100 !important;
 		margin: 0 !important;
 	}
@@ -22,6 +22,15 @@
 	}
 	.top_wrapper {
 		z-index: 10;
+		top: 25vh;
+	}
+	.top_wrapper .top_text h1{
+		font-size: 5rem;
+		border: 10px solid #fff;
+	}
+
+	.p_block_inf{
+		/*height: 600px;*/
 	}
 }
 
@@ -42,6 +51,7 @@
 	.resume_container .left h3 {
 		margin-top: 0;
 	}
+
 }
 
 /* Extra Small Devices, Phones */
@@ -50,12 +60,16 @@
 		font-size: 2.3rem;
 	}
 	.s_portfolio .s_descr{
-		margin-bottom: 4.5vh;
+		/*margin-bottom: 4.5vh;*/
 	}
 	.top_wrapper .top_text h1 {
-		font-size: 2em;
+		font-size: 4em;
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	.top_wrapper .top_text p{
+		font-size: 1rem;
+    	letter-spacing: 2.5px;
 	}
 	.main_footer {
 		text-align: left;
@@ -68,10 +82,24 @@
 	.main_footer .social_wrap ul {
 		padding-left: 0;
 	}
+
+	.p_block_inf{
+		/*height: 700px; */
+	}
+
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+	.top_wrapper .top_text h1 {
+		font-size: 3em;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.top_wrapper .top_text p{
+		font-size: 1.3rem;
+    	letter-spacing: 1px;
+	}
 	.s_portfolio li{
 		font-size: 2.3rem;
 	}
@@ -88,9 +116,6 @@
 	.top_mnu ul{
 		margin-top: 25vh;
 	}
-	.s_portfolio ul{
-		display: flex;
-	}
 	.p_item .port_item_cont{
 		padding-top: 10vh;
 	}
@@ -98,17 +123,6 @@
 		font-size:1.7vh;
 		letter-spacing: .01vh;
 	}
-	.p_item h3{
-		font-size: 2vh;
-	}
-	.p_item p{
-		color: #999;
-		font-size: 1.5vh;
-	}
-
-}
-
-@media only screen and (min-width: 425px){
 
 }
 
@@ -124,16 +138,15 @@
 
 	.s_descr_wrap .s_descr{
 		font-size: 2vh;
-		/* margin-bottom: 3.5vh; */
 	}
 	section h2{
 		font-size: 3vh;
 	}
 	section .personal_header {
-		font-size: 2.8vh;
+		font-size: 2.5vh;
 	}
 	section h3, .main_head h3{
-		margin-top: 55px;
+		/*margin-top: 55px;*/
 	}
 	.s_about .social_wrap ul{
 		display: flex;

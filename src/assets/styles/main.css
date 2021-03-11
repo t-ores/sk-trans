@@ -52,7 +52,7 @@ section {
     font-size: 12px;
     position: relative;
     margin-bottom: 130px;
-    font-weight: 600; }
+    font-weight: 100; }
     .s_descr_wrap .s_descr::after {
       content: "";
       height: 1px;
@@ -372,10 +372,10 @@ svg path {
   cursor: pointer;
   line-height: 2; }
 .s_portfolio ul {
+  display: flex;
   margin-bottom: 50px; }
 
-.portfolio_item {
-  /*display: none;*/
+/*.portfolio_item {
   display: inline-block;
   padding: 0; }
   .portfolio_item img {
@@ -402,7 +402,7 @@ svg path {
     background-color: transparent;
     border: #fff 1px solid;
     padding: 2px 10px;
-    display: inline-block; }
+    display: inline-block; }*/
 
 .podrt_descr {
   background-color: #fff;
@@ -418,7 +418,9 @@ svg path {
     text-transform: uppercase;
     font-weight: 400;
     margin-top: 20px;
-    padding-top: 25px; }
+    padding-top: 25px; 
+    font-size: 1.5rem;
+  }
   .podrt_descr p {
     margin-top: 0; }
   .podrt_descr img {

@@ -3,6 +3,8 @@ import background_m from '../img/bg-mobile-4.jpg'
 
 $(document).ready(function($) {
 
+	$(".parallax-slider").attr("alt", "SK-Trans")
+
 	//PORTFOLIO
 	$(".s_portfolio li").click(function() {
 		$(".s_portfolio li").removeClass("active");

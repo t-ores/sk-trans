@@ -104,7 +104,6 @@ export function about_s_content(val_right, val_left) {
                 ${Object.keys(val_right.p).map(about_p).join(' ')}
             </div>
             <div class="col-sm">
-                <h3>${val_left.h3}</h3>
                 <h2 class="personal_header">${val_left.h2}</h2>
                 <ul>
                     ${Object.keys(val_left.ul).map(toStr).join(' ')}
@@ -156,7 +155,7 @@ export function portf_items(content){
                     <div class="port_item_cont">
                         <h3>${content[key].h3}</h3>
                         <p>${content[key].p}</p>
-                        <a href="#" class="popup_content">Більше...</a>
+                        <a href="#" class="popup_content">Більше</a>
                     </div>
                     <div class="mfp-hide">
                         <div class="podrt_descr">
@@ -181,7 +180,7 @@ export function portfolio_s_content(content, filters){
         <div class="row">
             <div class="filter_div control">
                 <ul>
-                    <li class="filter active" data-filter=".category-0">ПЕРЕВЕЗТИ МЕБЕЛЬ, ЛИЧНЫЕ ВЕЩИ</li>
+                    <li class="filter active" data-filter=".category-0">Вантажоперевезення</li>
                     ${Object.keys(filters).map(toStr).join(' ')}
                 </ul>
             </div>
@@ -215,7 +214,7 @@ export function contacts_s_content(content) {
                 <div class="contact_box">
                     <div class="contacts_icon icon-basic-webpage-img-txt"></div>
                     <h3>Веб-сайт:</h3>
-                    <p><a href="//${content.website}" target="_blank">${content.website}</a></p>
+                    <p><a href="${content.website}" target="_blank">${content.website}</a></p>
                 </div>
             </div>
             
@@ -236,7 +235,7 @@ export function contacts_s_content(content) {
                         <textarea name="message" placeholder="Ваше сообщение" data-validation-required-message="Вы не ввели сообщение" required=""></textarea>
                         <span class="help-block text-danger"></span>
                     </label>
-                    <button>Отправить</button>
+                    <button>Відправити</button>
                 </form>
             </div>
             
