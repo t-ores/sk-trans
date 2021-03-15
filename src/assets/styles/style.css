@@ -190,3 +190,26 @@ section .personal_header{
     .p_block_inf{
         display: flex;
     }
+
+    .lardi-trans-point{
+        content: url('../img/lardi-trans-point.png');
+        width:2vh;
+    }
+    .s_about .lardi-trans-point{
+        width: 5vh;
+    }
+    .fa-truck{
+        transform: rotateY(180deg);
+    }
+
+    .p_block_inf{
+        display: flex;
+        position: relative;
+        width: 100%;
+        min-height: 460px;
+    }
+      .p_item img {
+        max-width: 100%; 
+        width: auto;
+        height: 100%; 
+    }

@@ -13,6 +13,7 @@ export function col(content) {
     return `<div class="col-sm">${content}</div>`
 }
 export function a(content){
+    //console.log(content)
     return `<a href="#${content.replace(' ','_').toLowerCase()}">${content}</a>`
 }
 //FLUID TEST
@@ -65,7 +66,7 @@ export function toggle_mnu() {
             </button>`
 }
 
-export function topmenu(content, styles = '') {
+export function topmenu(content, styles = '') {   
     return `<nav class="top_mnu" style="${styles}">${content}</nav>`
 }
 export function logo(content, styles) {
@@ -93,7 +94,7 @@ export function s_content(content) {
 //ABOUT
 export function about_s_content(val_right, val_left) {
     let toStr = key => `<li>${val_left.ul[key]}</li>`
-    let socials = key => `<li><a href="${val_left.socials[key]}" target="_blank"><i class="fa fa-${key}"></i></a></li>`
+    let socials = key => `<li><a href="${val_left.socials[key]}" target="_blank"><i class="fab fas fa fa-${key}"></i></a></li>`
     let about_p = key => `<p>${val_right.p[key]}</p>`
     return `
 <div class="section_content">
@@ -111,6 +112,7 @@ export function about_s_content(val_right, val_left) {
                 <div class="social_wrap">
                     <ul>
                         ${Object.keys(val_left.socials).map(socials).join(' ')}
+                        <!--<li><a href="#" target="_blank"><i class="lardi-trans-point"></i></a></li>-->
                     </ul>
                 </div>
             </div>
@@ -122,28 +124,6 @@ export function about_s_content(val_right, val_left) {
 
 
 //PORTFOLIO
-// export function portf_items(content){
-//     const toStr = key => `
-//                 <div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item ${content[key].category}">
-//                     <img src="${content[key].img}" alt="${content[key].h3}" />
-//                     <div class="port_item_cont">
-//                         <h3>${content[key].h3}</h3>
-//                         <p>${content[key].p}</p>
-//                         <a href="#" class="popup_content">Посмотреть</a>
-//                     </div>
-//                     <div class="hidden">
-//                         <div class="podrt_descr">
-//                             <div class="modal-box-content">
-//                                 <button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-//                                 <h3>${content[key].h3}</h3>
-//                                 <p>${content[key].desc}</p>
-//                                 <img src="./assets/img/portfolio-images/${content[key].img}" alt="${content[key].h3}" />
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>`
-//     return Object.keys(content).map(toStr).join(' ')
-// }
 export function portf_items(content){
     const toStr = key => `
                 <div class="mix col-md-12 col-sm-12 col-xs-12 ${content[key].category}">
@@ -202,8 +182,9 @@ export function contacts_s_content(content) {
         <div class="row">
             <div class="col-sm">
                 <div class="contact_box">
+                <div class="hidden contacts_icon icon-basic-book-pencil"></div>
                     <div class="contacts_icon icon-basic-geolocalize-05"></div>
-                    <h3>Адрес:</h3>
+                    <h3>Адреса:</h3>
                     <p>${content.address}</p>
                 </div>
                 <div class="contact_box">
@@ -214,25 +195,26 @@ export function contacts_s_content(content) {
                 <div class="contact_box">
                     <div class="contacts_icon icon-basic-webpage-img-txt"></div>
                     <h3>Веб-сайт:</h3>
-                    <p><a href="${content.website}" target="_blank">${content.website}</a></p>
+                    <p>${content.website}</p>
                 </div>
             </div>
-            
+            <!--https://sk-trans.bitrix24.ua/rest/1/em9xr1vneq18go42/-->
+            <!--https://formspree.io/f/mvovjyvd-->
             <div class="col-sm">
-                <form action="https://formspree.io/f/mvovjyvd" class="main_form" novalidate="" target="_blank" method="post" id="my-form">
+                <form action="https://sk-trans.bitrix24.ua/rest/1/em9xr1vneq18go42/" class="main_form" novalidate="" target="_blank" method="post" id="my-form">
                     <label class="form-group">
-                        <span class="color_element">*</span> Ваше имя:
-                        <input type="text" name="name" placeholder="Ваше имя" data-validation-required-message="Вы не ввели имя" required="" aria-invalid="false">
+                        <span class="color_element">*</span> Ваше Ім'я:
+                        <input type="text" name="name" placeholder="Ваше Ім'я" data-validation-required-message="Ви не ввели Імя" required="" aria-invalid="false">
                         <span class="help-block text-danger"></span>
                     </label>
                     <label class="form-group">
                         <span class="color_element">*</span> Ваш E-mail:
-                        <input type="email" name="email" placeholder="Ваш E-mail" data-validation-required-message="Не корректно введен E-mail" required="">
+                        <input type="email" name="email" placeholder="Ваш E-mail" data-validation-required-message="Не корректно введений E-mail" required="">
                         <span class="help-block text-danger"></span>
                     </label>
                     <label class="form-group">
-                        <span class="color_element">*</span> Ваше сообщение:
-                        <textarea name="message" placeholder="Ваше сообщение" data-validation-required-message="Вы не ввели сообщение" required=""></textarea>
+                        <span class="color_element">*</span> Ваш номер телефону:
+                        <input type="text" name="phone" placeholder="Ваш номер телефону" data-validation-required-message="Ви не ввели нічого" required=""></textarea>
                         <span class="help-block text-danger"></span>
                     </label>
                     <button>Відправити</button>
@@ -246,7 +228,7 @@ export function contacts_s_content(content) {
 //СONTACTS
 
 export function footer_s_content(content) {
-    let socials = key => `<li><a href="${content.socials[key]}" target="_blank"><i class="fa fa-${key}"></i></a></li>`
+    let socials = key => `<li><a href="${content.socials[key]}" target="_blank"><i class="fab fas fa fa-${key}"></i></a></li>`
     return `
         <div class="container">
             <div class="row">
@@ -255,6 +237,7 @@ export function footer_s_content(content) {
                     <div class="social_wrap">
                         <ul>
                             ${Object.keys(content.socials).map(socials).join(' ')}
+                            <!--<li><a href="#" target="_blank"><i class="lardi-trans-point"></i></a></li>-->
                         </ul>
                     </div>
                 </div>

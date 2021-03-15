@@ -38,7 +38,9 @@ export class TopMenuBlock extends BlockEXT {
     super(value, options)
   }
   toHTML() {
-    const html = ul_li(this.value.map(a).join('</li><li>'))
+    const toString = key => `<a href="#${key}">${this.value[key]}</a>`
+    const menu = Object.keys(this.value).map(toString).join('</li><li>')
+    const html = ul_li(menu)
     return topmenu(html, css(this.options.styles))
   }
 }

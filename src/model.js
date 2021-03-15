@@ -2,6 +2,8 @@ import logo from './assets/img/logo-light.png'
 import p_img_1 from './assets/img/portfolio-images/7.jpg'
 import p_img_2 from './assets/img/portfolio-images/8.jpg'
 import p_img_3 from './assets/img/portfolio-images/1.jpg'
+import p_img_4 from './assets/img/portfolio-images/1.png'
+import p_img_5 from './assets/img/portfolio-images/2.png'
 import {
     TopMenuBlock,
     HeaderBlock,
@@ -13,11 +15,13 @@ import {
 
 export const model = [
 // MENU
-    new TopMenuBlock([
-      'About',
-      'Portfolio',
-      'Contacts'
-    ]),
+    new TopMenuBlock(
+    {
+      'about':'Про нас',
+      'portfolio':'Наші послуги',
+      'contacts':'Контакти'
+    }),
+
 // MENU
 
 //HEADER
@@ -37,7 +41,7 @@ export const model = [
           margin: '0px 0px 0px 5vw',
         },
         h1:'SK-Trans',
-        p:'Вантажні перевезення по Україні'
+        p:'Перевезення вантажів по Україні'
       }),
 //HEADER
 
@@ -62,13 +66,13 @@ export const model = [
                 // birth:'День рождения: 3 июня 1988 года',
                 // phone:'Номер телефона: +7 999 999 99 99',
                 // email:'E-mail: <a href="mailto:youmail@mail.ru">youmail@mail.ru</a>',
-                website:'Cайт: <a href="https://sk-trans-ua.web.app" target="_blank">sk-trans.com.ua</a>'
+                website:'Cайт: <a href="https://sk-trans-ua.web.app/" target="_blank">sk-trans-ua.web.app</a>'
                 },
             socials:{
-                'telegram':'https://t.me/sk_trans',
+                'paper-plane':'https://t.me/sk_trans',
                 'facebook':'#',
                 'instagram':'https://www.instagram.com/sk_trans.com.ua/',
-                'github':'#'
+                'truck':'https://lardi-trans.ua/user/16751245600/'
                 }
             }
         }
@@ -87,8 +91,8 @@ export const model = [
 [
         {
             category:'p_item category-0',
-            img:p_img_1,
-            h3:'Перевезти меблі, особисті речі',
+            img:p_img_4,
+            h3:'Перевезення вантажів',
             p:'Міжміські вантажоперевезення. Організуємо домашній переїзд або швидку доставку вантажу по всій території України.',
             desc:'<b>Як відбувається процес перевезення:</b></br>' +
                 'З логістом потрібно узгодити час завантаження, розвантаження, кількість вантажу іспособ оплати. Після завантаження автомобіль відразу виїжджає за маршрутом, Ви тримаєте зв"язок з водієм і з логістом.</br>' +
@@ -98,7 +102,7 @@ export const model = [
         },
         {
             category:'p_item category-1',
-            img:p_img_2,
+            img:p_img_5,
             h3:'Довантаження',
             p:'Ми беремо кілька вантажів по одному маршруту, таким чином робимо перевезення доступнішими. У процесі транспортування повністю відповідаємо за цілісність і збереження вантажу. Для отримання вартості Вашої доставки - телефонуйте або пишіть нам!',
             desc:'<b>Попутні вантажоперевезення</b></br>' +
@@ -138,7 +142,7 @@ export const model = [
 new ContactBlock({
         address:'м.Луцьк, вул.Запорізька, 37',
         phone:'+380 97 919 59 15',
-        website:'sk-trans.com.ua'
+        website:'<a href="https://sk-trans-ua.web.app/" target="_blank">sk-trans-ua.web.app</a>'
     },
     {
         tag: 'section',
@@ -154,10 +158,10 @@ new ContactBlock({
 new FooterBlock({
     copyright: '2021 SK-Trans',
     socials:{
-        'telegram':'https://t.me/sk_trans',
+        'paper-plane':'https://t.me/sk_trans',
         'facebook':'#',
         'instagram':'https://www.instagram.com/sk_trans.com.ua/',
-        'github':'#'
+        'truck':'https://lardi-trans.ua/user/16751245600/'
     }
 },
     {
