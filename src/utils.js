@@ -198,8 +198,7 @@ export function contacts_s_content(content) {
                     <p>${content.website}</p>
                 </div>
             </div>
-            <!--https://sk-trans.bitrix24.ua/rest/1/em9xr1vneq18go42/-->
-            <!--https://formspree.io/f/mvovjyvd-->
+            
             <div class="col-sm">
                 <form action="https://sk-trans.bitrix24.ua/rest/1/em9xr1vneq18go42/" class="main_form" novalidate="" target="_blank" method="post" id="my-form">
                     <label class="form-group">
