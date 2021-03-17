@@ -175,7 +175,9 @@ export function portfolio_s_content(content, filters){
 
 
 //СONTACTS
+
 export function contacts_s_content(content) {
+
     return `
 <div class="section_content">
     <div class="container">
@@ -198,25 +200,32 @@ export function contacts_s_content(content) {
                     <p>${content.website}</p>
                 </div>
             </div>
-            
+
             <div class="col-sm">
-                <form action="https://sk-trans.bitrix24.ua/rest/1/em9xr1vneq18go42/" class="main_form" novalidate="" target="_blank" method="post" id="my-form">
+                <form class="main_form" method="post" id="my-form">
+
+                    <label class="hidden">
+                        <span class="color_element">*</span> Ваше Ім'я:
+                        <input type="text" name="FIELDS[TITLE]" placeholder="Ваше Ім'я" data-validation-required-message="Ви не ввели Імя" required="" aria-invalid="false" value="Новий лід з форми на сайті sk-trans-ua.web.app">
+                        <span class="help-block text-danger"></span>
+                    </label>
+
                     <label class="form-group">
                         <span class="color_element">*</span> Ваше Ім'я:
-                        <input type="text" name="name" placeholder="Ваше Ім'я" data-validation-required-message="Ви не ввели Імя" required="" aria-invalid="false">
+                        <input type="text" name="FIELDS[NAME]" placeholder="Ваше Ім'я" data-validation-required-message="Ви не ввели Імя" required="" aria-invalid="false">
                         <span class="help-block text-danger"></span>
                     </label>
                     <label class="form-group">
                         <span class="color_element">*</span> Ваш E-mail:
-                        <input type="email" name="email" placeholder="Ваш E-mail" data-validation-required-message="Не корректно введений E-mail" required="">
+                        <input type="email" name="FIELDS[EMAIL][0][VALUE]" placeholder="Ваш E-mail" data-validation-required-message="Не корректно введений E-mail" required="">
                         <span class="help-block text-danger"></span>
                     </label>
                     <label class="form-group">
                         <span class="color_element">*</span> Ваш номер телефону:
-                        <input type="text" name="phone" placeholder="Ваш номер телефону" data-validation-required-message="Ви не ввели нічого" required=""></textarea>
+                        <input type="text" name="FIELDS[PHONE][0][VALUE]" placeholder="Ваш номер телефону" data-validation-required-message="Ви не ввели нічого" required=""></textarea>
                         <span class="help-block text-danger"></span>
-                    </label>
-                    <button>Відправити</button>
+                    </label> 
+                    <button type="submit">Відправити</button>
                 </form>
             </div>
             

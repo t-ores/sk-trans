@@ -1,9 +1,6 @@
 import logo from './assets/img/logo-light.png'
-import p_img_1 from './assets/img/portfolio-images/7.jpg'
-import p_img_2 from './assets/img/portfolio-images/8.jpg'
-import p_img_3 from './assets/img/portfolio-images/1.jpg'
-import p_img_4 from './assets/img/portfolio-images/1.png'
-import p_img_5 from './assets/img/portfolio-images/2.png'
+import p_img_1 from './assets/img/portfolio-images/12.png'
+import p_img_2 from './assets/img/portfolio-images/3.png'
 import {
     TopMenuBlock,
     HeaderBlock,
@@ -91,7 +88,7 @@ export const model = [
 [
         {
             category:'p_item category-0',
-            img:p_img_4,
+            img:p_img_1,
             h3:'Перевезення вантажів',
             p:'Міжміські вантажоперевезення. Організуємо домашній переїзд або швидку доставку вантажу по всій території України.',
             desc:'<b>Як відбувається процес перевезення:</b></br>' +
@@ -102,7 +99,7 @@ export const model = [
         },
         {
             category:'p_item category-1',
-            img:p_img_5,
+            img:p_img_2,
             h3:'Довантаження',
             p:'Ми беремо кілька вантажів по одному маршруту, таким чином робимо перевезення доступнішими. У процесі транспортування повністю відповідаємо за цілісність і збереження вантажу. Для отримання вартості Вашої доставки - телефонуйте або пишіть нам!',
             desc:'<b>Попутні вантажоперевезення</b></br>' +

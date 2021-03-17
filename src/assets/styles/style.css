@@ -133,9 +133,6 @@ section .personal_header{
   display: inline-block;
   padding: 0; }
   
-  .p_item img {
-    width: auto; 
-}
  .p_item .port_item_cont {
     /* position: relative; */
     position: absolute;
@@ -173,11 +170,6 @@ section .personal_header{
         color:#2EA2CC;
     }
 
-
-    div.p_item img{
-        margin: 0 auto;
-    }
-
     #portfolio_grid{
         position: relative;
         padding: 0;
@@ -185,10 +177,6 @@ section .personal_header{
 
     .s_portfolio li.active{
         color: black;
-    }
-
-    .p_block_inf{
-        display: flex;
     }
 
     .lardi-trans-point{
@@ -206,10 +194,23 @@ section .personal_header{
         display: flex;
         position: relative;
         width: 100%;
-        min-height: 460px;
+        min-height: 400px;
     }
-      .p_item img {
-        max-width: 100%; 
-        width: auto;
-        height: 100%; 
+    .p_item img {
+        display: block;
+        position: relative;
+        vertical-align: middle;
+        margin: 0 auto;
+        background: no-repeat scroll center center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-inf-block:before{
+        display: flex;
+    }
+    .form-inf-block{
+        width: 100%;
+        margin: auto;
     }

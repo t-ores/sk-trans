@@ -28,10 +28,6 @@
 		font-size: 5rem;
 		border: 10px solid #fff;
 	}
-
-	.p_block_inf{
-		/*height: 600px;*/
-	}
 }
 
 /* Small Devices, Tablets */
@@ -82,11 +78,6 @@
 	.main_footer .social_wrap ul {
 		padding-left: 0;
 	}
-
-	.p_block_inf{
-		/*height: 700px; */
-	}
-
 }
 
 /* Custom, iPhone Retina */
@@ -154,6 +145,10 @@
 	.social_wrap li{
 		padding: 0;
 		margin: auto;	
+	}
+	.p_item img{
+		width: auto;
+		height: 100%;
 	}
 }
 /* Medium Devices, Desktops */

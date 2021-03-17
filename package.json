@@ -14,7 +14,7 @@
   "author": "t-ores <yakim.oresst@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "1.12.4"
+    "parcel-bundler": "^1.12.5"
   },
   "repository": {
     "type": "git",
@@ -30,10 +30,9 @@
     "firebase": "^8.2.10",
     "jquery": "^3.5.1",
     "jquery-parallax.js": "^1.5.0",
+    "lazy": "^1.0.11",
     "magnific-popup": "^1.1.0",
     "mixitup": "^3.3.1",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.2.5",
     "navigator": "^1.0.1"
   }
 }
