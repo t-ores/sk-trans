@@ -89,19 +89,16 @@ $(document).ready(function($) {
 	window.addEventListener( "load", function () {
 	  function sendData() {
 	    const XHR = new XMLHttpRequest();
-
 	    // Bind the FormData object and the form element
 	    const FD = new FormData( form );
 	    // Define what happens on successful data submission
 	    XHR.addEventListener( "load", function(event) {
 	    	$('form.main_form').append(`<p class="form-inf-block text-success">Ваші дані відправлені !</p>`)
 	    	//$('form.main_form').append(`<pre>${event.target.responseText}</pre>`)
-	      	//alert( event.target.responseText );
 	    } );
 	    // Define what happens in case of error
 	    XHR.addEventListener( "error", function( event ) {
 			$('form.main_form').append(`<p class="form-inf-block text-danger">Ваші дані не відправлено !</p>`)
-	      	//alert( 'Oops! Something went wrong.' );
 	    } );
 	    // Set up our request 
 	    //XHR.open( "POST", "https://sk-trans.bitrix24.ua/rest/1/4da6dwrb36o7ujqd/crm.lead.add.json" );
@@ -120,6 +117,12 @@ $(document).ready(function($) {
 	} );
 	//FORM
 
+	// CHAT WIDGET
+        (function(w,d,u){
+            var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+            var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ua/b17015247/crm/site_button/loader_2_qtkg72.js');
+	// CHAT WIDGET
 
 });
 

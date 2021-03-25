@@ -192,7 +192,7 @@ export function contacts_s_content(content) {
                 <div class="contact_box">
                     <div class="contacts_icon icon-basic-smartphone"></div>
                     <h3>Телефон:</h3>
-                    <p>${content.phone}</p>
+                    <p style="font-family: sans-serif;">${content.phone}</p>
                 </div>
                 <div class="contact_box">
                     <div class="contacts_icon icon-basic-webpage-img-txt"></div>
@@ -205,8 +205,8 @@ export function contacts_s_content(content) {
                 <form class="main_form" method="post" id="my-form">
 
                     <label class="hidden">
-                        <span class="color_element">*</span> Ваше Ім'я:
-                        <input type="text" name="FIELDS[TITLE]" placeholder="Ваше Ім'я" data-validation-required-message="Ви не ввели Імя" required="" aria-invalid="false" value="Новий лід з форми на сайті sk-trans-ua.web.app">
+                        <span class="color_element">*</span> Новий лід:
+                        <input type="text" name="FIELDS[TITLE]" placeholder="Новий лід" data-validation-required-message="Новий лід" required="" aria-invalid="false" value="Новий лід sk-trans-ua.web.app">
                         <span class="help-block text-danger"></span>
                     </label>
 
@@ -241,7 +241,9 @@ export function footer_s_content(content) {
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    &copy; ${content.copyright}
+                    <div style="font-family: sans-serif;">
+                        &copy; ${content.copyright}
+                    </div>
                     <div class="social_wrap">
                         <ul>
                             ${Object.keys(content.socials).map(socials).join(' ')}
