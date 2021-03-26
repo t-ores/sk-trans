@@ -6,6 +6,7 @@ import {
     HeaderBlock,
     AboutBlock,
     PortfolioBlock,
+    TestimonialsBloc,
     ContactBlock,
     FooterBlock
 } from './classes/blocksExtended'
@@ -16,6 +17,7 @@ export const model = [
     {
       'about':'Про нас',
       'portfolio':'Наші послуги',
+      'resume':'Відгуки',
       'contacts':'Контакти'
     }),
 
@@ -45,29 +47,29 @@ export const model = [
 // ABOUT
     new AboutBlock({
         about_right:{
-            h3: 'Чому вантажоперевезення варто довірити компанії SK-Trans',
+            h3: 'Чому перевезення вантажів варто довірити компанії SK-Trans Україна',
             p:[
                 '',
-                'SK-Trans - це професійна і злагоджена команда з величезним досвідом роботи в сфері логістики. Наш диспетчер завжди на зв"язку для оперативного вирішення будь-яких питань. У будь-який момент можна отримати детальну інформацію про те, де зараз перебуває вантаж завдяки використанню сучасних GPS-маячків. Ми розрахуємо оптимальний і найбільш безпечний маршрут, щоб будь-який вантаж дістався до місця призначення вчасно, а також допоможемо оформити будь-яку необхідну документацію.',
-                ''
+                "SK-Trans - це професійна і злагоджена команда з величезним досвідом роботи в сфері логістики. "+ 
+                "Наші логісти завжди на звязку для оперативного вирішення будь-яких питань. "+
+                "У будь-який момент можна отримати детальну інформацію про те, де зараз перебуває вантаж. "+
+                "Ми розрахуємо оптимальний і найбільш безпечний маршрут, щоб будь-який вантаж дістався до місця призначення вчасно, "+
+                "а також допоможемо оформити будь-яку необхідну документацію."
                 ],
             },
         about_left:{
             h3: '',
             h2:'Наші послуги',
             ul:{
-                li_head:'Основний напрямок роботи SK-Trans - це вантажоперевезення. Ми працюємо з такими об"єктами:',
+                li_head:"Основні напрямок роботи SK-Trans Україна:",
                 birth:'- габаритні і негабаритні вантажі;',
                 phone:'- збірні вантажі вагою від 100 кг до 22 тонн та інші.',
-                email:'',
-                // birth:'День рождения: 3 июня 1988 года',
-                // phone:'Номер телефона: +7 999 999 99 99',
-                // email:'E-mail: <a href="mailto:youmail@mail.ru">youmail@mail.ru</a>',
-                website:'Cайт: <a href="https://sk-trans-ua.web.app/" target="_blank">sk-trans-ua.web.app</a>'
+                email:'- надаємо експедиційні послуги',
+                //website:'Cайт: <a href="https://sk-trans-ua.web.app/" target="_blank">sk-trans-ua.web.app</a>'
                 },
             socials:{
                 'paper-plane':'https://t.me/sk_trans',
-                'facebook':'#',
+                //'facebook':'#',
                 'instagram':'https://www.instagram.com/sk_trans.com.ua/',
                 'truck':'https://lardi-trans.ua/user/16751245600/'
                 }
@@ -78,7 +80,7 @@ export const model = [
         id: 'about',
         classes: 'bg_light',
         h2:'Про компанію',
-        p:'SK-Trans',
+        p:'SK-Trans Україна',
 
     }),
 //ABOUT
@@ -132,14 +134,53 @@ export const model = [
         }
 }),
 //PORTFOLIO
-
-
+  
+//TESTIMONIALS
+new TestimonialsBloc(
+[
+    {
+        img:'https://cdn1.lardi-trans.com/upload/gallery/7c/b7c4/58503116e4b099fcaf8153f1_340x340.jpeg',
+        strong:'АЛЬТТРАНССЕРВИС',
+        who:'ООО Україна, Дніпро',
+        p:'Благодарим за выполненную работу. Надёжный и ответственный перевозчик. Всем рекомендуем к сотрудничеству!',
+        direction:'left'
+    },
+        {
+        img:'https://cdn1.lardi-trans.com/upload/gallery/4da/aed6/5841b796e4b099fcaf811c8e_340x340.png',
+        strong:'КРАВЧУК ПАВЕЛ АЛЕКСАНДРОВИЧ',
+        who:'ФЛП Україна, Смела',
+        p:'Спасибо перевозчику за отличную работу!',
+        direction:'right'
+    },
+    {
+        img:'https://cdn1.lardi-trans.com/upload/gallery/db/454f/551e50cce4b016890ca31047_340x340.jpeg',
+        strong:'Він Єкспо',
+        who:'ПП Україна, Вінниця',
+        p:'Дякую,перевізнику, за працю! Рекомендую всім замовникам, як надійного перевізника! Успіхів вам у роботі!Сподіваюсь на співпрацю, Юрій.',
+        direction:'left'
+    },
+        {
+        img:'https://cdn1.lardi-trans.com/upload/gallery/154/76d0/55156695e4b05e556807d4bb_340x340.jpeg',
+        strong:'КРАВЧУК ПАВЕЛ АЛЕКСАНДРОВИЧ',
+        who:'ФЛП Україна, Вінниця',
+        p:'Дякую за співпрацю. Відповідальний, порядний та надій перевізник. Успіху та процвітання, з повагою Альона Яремчук.',
+        direction:'right'
+    }
+],
+{
+        tag: 'section',
+        id: 'resume',
+        classes: '',
+        h2:'Відгуки',
+        p:'Наші клієнти про нас'
+}),
+//TESTIMONIALS
 
 //CONTACTS
 new ContactBlock({
         address:'м.Луцьк, вул.Запорізька, 37',
-        phone:'+380 97 919 59 15',
-        website:'<a href="https://sk-trans-ua.web.app/" target="_blank">sk-trans-ua.web.app</a>'
+        phone:'+380 97 919 59 15'
+        //website:'<a href="https://sk-trans-ua.web.app/" target="_blank">sk-trans-ua.web.app</a>'
     },
     {
         tag: 'section',
@@ -156,7 +197,7 @@ new FooterBlock({
     copyright: '2021 SK-Trans',
     socials:{
         'paper-plane':'https://t.me/sk_trans',
-        'facebook':'#',
+        //'facebook':'#',
         'instagram':'https://www.instagram.com/sk_trans.com.ua/',
         'truck':'https://lardi-trans.ua/user/16751245600/'
     }

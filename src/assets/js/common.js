@@ -79,13 +79,14 @@ $(document).ready(function($) {
 
 	$(".top_mnu ul a").mPageScroll2id();
 
-	
+	var res_right_strong = $(".right .resume_description strong")
+	var res_right_descr = $(".right .resume_description")
 
+	//console.log(res_right_strong)
+	//res_right_strong.prependTo(res_right_descr);
+	//$(".right .resume_description strong").prependTo($(".right .resume_description"));
+	//$(".right .resume_description strong").remove(); 
 	//FORM
-	// $("form.main_form button").click(function (){
-		
-	// })
-
 	window.addEventListener( "load", function () {
 	  function sendData() {
 	    const XHR = new XMLHttpRequest();
@@ -94,6 +95,7 @@ $(document).ready(function($) {
 	    // Define what happens on successful data submission
 	    XHR.addEventListener( "load", function(event) {
 	    	$('form.main_form').append(`<p class="form-inf-block text-success">Ваші дані відправлені !</p>`)
+	    	$('form.main_form input').value = ''
 	    	//$('form.main_form').append(`<pre>${event.target.responseText}</pre>`)
 	    } );
 	    // Define what happens in case of error

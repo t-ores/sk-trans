@@ -18,6 +18,7 @@ import {
   filter_div,
   portfolio_s_content,
   about_s_content,
+  testimonials_s_content,
   contacts_s_content,
   footer_s_content
 } from '../utils'
@@ -97,6 +98,21 @@ export class PortfolioBlock extends BlockEXT {
 }
 // PORTFOLIO BLOCK
 
+//TESTIMONIALS BLOCK
+export class TestimonialsBloc extends BlockEXT {
+  constructor(value, options) {
+    super(value, options)
+  }
+  toHTML() {
+    const {tag = 'div', h2, p, id, classes} = this.options
+    return `
+            <${tag} id="${id}" class="s_${id} ${classes}">
+                ${s_header(h2, p)} 
+                ${testimonials_s_content(this.value)}
+            </${tag}>`
+  }
+}
+//TESTIMONIALS BLOCK
 
 //CONTACT BLOCK
 export class ContactBlock extends BlockEXT {

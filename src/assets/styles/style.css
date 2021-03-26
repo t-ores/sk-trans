@@ -214,3 +214,6 @@ section .personal_header{
         width: 100%;
         margin: auto;
     }
+    button, input, select, textarea{
+        font-family: monospace;
+    }

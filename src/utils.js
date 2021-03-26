@@ -99,7 +99,7 @@ export function about_s_content(val_right, val_left) {
     return `
 <div class="section_content">
     <div class="container">
-        <div class="row">
+        <!--<div class="row">-->
             <div class="col-sm">
                 <h3>${val_right.h3}</h3>
                 ${Object.keys(val_right.p).map(about_p).join(' ')}
@@ -116,7 +116,7 @@ export function about_s_content(val_right, val_left) {
                     </ul>
                 </div>
             </div>
-        </div>
+        <!--</div>-->
     </div>
 </div>`
 }
@@ -173,6 +173,131 @@ export function portfolio_s_content(content, filters){
 }
 //PORTFOLIO
 
+//TESTIMONIALS
+export function testimonials_s_content(content){
+    return `
+            <div class="section_content">
+                <div class="container">
+                    <div class="row">
+                        <div class="resume_container">
+
+                            <div class="col-md-6 col-sm-6 left">
+
+                                <div class="item">
+                                    <div class="resume_icon">
+                                        <div class="res_img">
+                                            <img src="https://cdn1.lardi-trans.com/upload/gallery/7c/b7c4/58503116e4b099fcaf8153f1_340x340.jpeg" style="max-width: 100px;">
+                                        </div>
+                                    </div>
+                                    <div class="resume_item animated fadeInLeft" style="opacity: 1;">
+                                        <div class="resume_description">ООО Україна, Дніпро<strong>АЛЬТТРАНССЕРВИС</strong></div>
+                                        <p>Благодарим за выполненную работу. Надёжный и ответственный перевозчик. Всем рекомендуем к сотрудничеству!</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="resume_icon">
+                                        <div class="res_img">
+                                            <img src="https://cdn1.lardi-trans.com/upload/gallery/393/186b3/5c50227ce4b012c1338cc9f9_340x340.jpeg" style="max-width: 100px;">
+                                        </div>
+                                    </div>
+                                    <div class="resume_item animated fadeInLeft" style="opacity: 1;">
+                                        <div class="resume_description">ТОВ Україна, Дніпро<strong>ТРАНС-ПРОМ</strong></div>
+                                        <p>Спасибо, ответственный перевозчик! Рекомендую!</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="resume_icon">
+                                        <div class="res_img">
+                                            <img src="https://cdn1.lardi-trans.com/upload/gallery/34c/15a38/60409b551e6e765b385c6fcd_340x340.jpeg" style="max-width: 100px;">
+                                        </div>
+                                    </div>
+                                    <div class="resume_item animated fadeInLeft" style="opacity: 1;">
+                                        <div class="resume_description">Тернопіль<strong>Патмос Україна</strong></div>
+                                        <p>Надійний перевізник, все згідно домовленостей, дякуємо за співпрацю. Рекомендуємо!</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 right">
+
+                                <div class="item">
+                                    <div class="resume_icon">
+                                        <div class="res_img">
+                                            <img src="https://cdn1.lardi-trans.com/upload/gallery/34d/7cb5/5bc7241de4b02423d91cb03d_340x340.png" style="max-width: 100px;">
+                                        </div>
+                                    </div>
+                                    <div class="resume_item animated fadeInLeft" style="opacity: 1;">
+                                        <div class="resume_description"><strong>НЕОЛИТ</strong>Україна, Дніпро</div>
+                                        <p>Работа выполнена отлично!!!Спасибо за сотрудничество!!!</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="resume_icon">
+                                        <div class="res_img">
+                                            <img src="https://cdn1.lardi-trans.com/upload/gallery/7b/126c3/5afbdde3e4b0f81f3029e584_340x340.png" style="max-width: 100px;">
+                                        </div>
+                                    </div>
+                                    <div class="resume_item animated fadeInLeft" style="opacity: 1;">
+                                        <div class="resume_description"><strong>КОНТИНЕНТАЛЬ ЛОДЖИСТИК</strong>ТОВ Україна, Київ</div>
+                                        <p>Ответственный и пунктуальный перевозчик! оперативно подали машину, быстрая и аккуратная доставка. Рекомендуем!</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="resume_icon">
+                                        <div class="res_img">
+                                            <img src="https://cdn1.lardi-trans.com/upload/gallery/40c/3b40/5e28b3328b02541bf9af6475_340x340.jpeg" style="max-width: 100px;">
+                                        </div>
+                                    </div>
+                                    <div class="resume_item animated fadeInLeft" style="opacity: 1;">
+                                        <div class="resume_description"><strong>ТМ ПОМИДОРА</strong>Україна, Кривий Ріг</div>
+                                        <p>Благодарим за качественную выгрузку! Надеемся на дальнейшее сотрудничество!</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="resume_more"><center><a href="https://lardi-trans.ua/reliability_zone/search_responses/?firmToId=16751245600&responseRate"><button>Переглянути більше відгуків</button></a></center></div>
+                    </div>
+                </div>
+            </div>`
+}
+
+// export function testimonials_s_content(content){
+//     return `
+//             <div class="section_content">
+//                 <div class="container">
+//                     <div class="row">
+//                         <div class="resume_container">
+//                             ${testimonial_item(content)}
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>`
+// }
+
+// export function testimonial_item(content, filters){
+//     const toStr = key => `
+//             <div class="res_item col-md-6 col-sm-6 ${content[key].direction}">
+//                 <div class="resume_icon">
+//                     <div class="res_img">
+//                         <img src="${content[key].img}">
+//                     </div> 
+//                 </div>
+//                 <div class="resume_item animated fadeInLeft" style="opacity: 1;">
+//                     <div class="resume_description">${content[key].who}<strong>${content[key].strong}</strong></div>
+//                     <p>${content[key].p}</p>
+//                 </div>
+//             </div>
+//             `
+//             return Object.keys(content).map(toStr).join(' ')
+// }
+//TESTIMONIALS
 
 //СONTACTS
 
@@ -182,7 +307,7 @@ export function contacts_s_content(content) {
 <div class="section_content">
     <div class="container">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-sm-6 col-md-6">
                 <div class="contact_box">
                 <div class="hidden contacts_icon icon-basic-book-pencil"></div>
                     <div class="contacts_icon icon-basic-geolocalize-05"></div>
@@ -194,14 +319,14 @@ export function contacts_s_content(content) {
                     <h3>Телефон:</h3>
                     <p style="font-family: sans-serif;">${content.phone}</p>
                 </div>
-                <div class="contact_box">
+                <!--<div class="contact_box">
                     <div class="contacts_icon icon-basic-webpage-img-txt"></div>
                     <h3>Веб-сайт:</h3>
                     <p>${content.website}</p>
-                </div>
+                </div>-->
             </div>
 
-            <div class="col-sm">
+            <div class="col-sm-6 col-md-6">
                 <form class="main_form" method="post" id="my-form">
 
                     <label class="hidden">

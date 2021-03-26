@@ -218,7 +218,7 @@ svg path {
       display: block;
       text-transform: uppercase;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 2rem;
       opacity: 0;
       position: relative;
       height: 60px;
@@ -240,7 +240,7 @@ svg path {
   width: 100%;
   height: auto;
   position: relative;
-  top: 25vh;
+  top: 15vh;
   left: 0;
   z-index: 0;
 }
@@ -263,9 +263,9 @@ svg path {
       letter-spacing: 5.5px}
     .top_wrapper .top_text h1 {
       display: inline-block;
-      padding: 10px 35px;
+      padding: 10px 50px;
       color: #fff;
-      border: 25px solid #fff;
+      border: 20px solid #fff;
       text-transform: uppercase;
       font-weight: bold;
       font-size: 8rem;
@@ -350,13 +350,48 @@ svg path {
     .resume_container .resume_item:last-child p {
       margin-bottom: 0; }
 
-.resume_icon {
+/*.resume_icon {
   font-size: 40px;
-  margin-bottom: 35px; }
-  .resume_icon .year {
-    display: inline-block;
-    margin-bottom: 15px;
-    padding: 0 10px; }
+  margin-bottom: 0; }
+*/
+
+.resume_icon{
+  border-radius: 50%;
+}
+.res_item{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.res_img{
+  border-radius: 50%;
+}
+.res_img img{
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  max-height: 60px;
+}
+
+.resume_container .item{
+  min-height: 145px;
+  margin: 20px 0px;
+}
+.resume_more{
+
+}
+.resume_more button{
+  background-color: #2EA2CC;
+  letter-spacing: 2px;
+  border: none;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 25px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 10px;
+  /*float: right;*/
+}
 
 .s_portfolio ul,
 .s_portfolio li {
