@@ -7,7 +7,7 @@ a {
 p,
 body .main_footer,
 .s_about li {
-  color: #888; }
+  color: #222; }
 
 .color_element {
   color: #2EA2CC; }
@@ -36,7 +36,8 @@ body .main_footer,
 
 .top_text p {
   color: #FAFAFA;
-  letter-spacing: 5px; }
+  letter-spacing: 5px; 
+  font-weight: 300;}
 
 .personal_header {
   letter-spacing: 2px; }
@@ -48,7 +49,7 @@ body .main_footer,
 
 section h3 {
   letter-spacing: 3px;
-  color: #888; }
+  color: #222; }
 
 .s_about p:nth-child(even) {
   color: #2EA2CC; }
@@ -66,7 +67,7 @@ section h3 {
   letter-spacing: 1px; }
 
 .s_portfolio li {
-  color: #888;
+  color: #222;
   letter-spacing: 2px; }
 .s_portfolio li.active {
   color: #fff;
@@ -94,9 +95,10 @@ form textarea {
 form button {
   background-color: #2EA2CC;
   letter-spacing: 2px; }
+
 form .form-group {
   letter-spacing: 2px;
-  color: #888; }
+  color: #fafafa; }
 
 .popup_content {
   letter-spacing: 1px; }

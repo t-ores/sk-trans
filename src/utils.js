@@ -93,21 +93,23 @@ export function s_content(content) {
 }
 //ABOUT
 export function about_s_content(val_right, val_left) {
-    let toStr = key => `<li>${val_left.ul[key]}</li>`
+    let toStr = key => `<li>${val_left.ul.item[key]}</li>`
     let socials = key => `<li><a href="${val_left.socials[key]}" target="_blank"><i class="fab fas fa fa-${key}"></i></a></li>`
     let about_p = key => `<p>${val_right.p[key]}</p>`
+
+    let tst = Object.keys(val_left.ul.item).map(toStr).join(' ')
+    console.log(tst)
     return `
 <div class="section_content">
     <div class="container">
-        <!--<div class="row">-->
             <div class="col-sm">
                 <h3>${val_right.h3}</h3>
                 ${Object.keys(val_right.p).map(about_p).join(' ')}
             </div>
             <div class="col-sm">
                 <h2 class="personal_header">${val_left.h2}</h2>
-                <ul>
-                    ${Object.keys(val_left.ul).map(toStr).join(' ')}
+                <ul class="cooperation">
+                    ${Object.keys(val_left.ul.item).map(toStr).join(' ')}
                 </ul>
                 <div class="social_wrap">
                     <ul>
@@ -116,7 +118,6 @@ export function about_s_content(val_right, val_left) {
                     </ul>
                 </div>
             </div>
-        <!--</div>-->
     </div>
 </div>`
 }
@@ -135,7 +136,8 @@ export function portf_items(content){
                     <div class="port_item_cont">
                         <h3>${content[key].h3}</h3>
                         <p>${content[key].p}</p>
-                        <a href="#" class="popup_content">Більше</a>
+                        <br>
+                        <a href="#" class="popup_content"><button class="sk_btn_light btn_more">Більше</button></a>
                     </div>
                     <div class="mfp-hide">
                         <div class="podrt_descr">
@@ -143,7 +145,7 @@ export function portf_items(content){
                                 <button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
                                 <h3>${content[key].h3}</h3>
                                 <p>${content[key].desc}</p>
-                                <img src="${content[key].img}" alt="${content[key].h3}" />
+                                <img src="${content[key].img_2}" alt="${content[key].h3}" />
                             </div>
                         </div>
                     </div>
@@ -308,46 +310,49 @@ export function contacts_s_content(content) {
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-md-6">
-                <div class="contact_box">
-                <div class="hidden contacts_icon icon-basic-book-pencil"></div>
-                    <div class="contacts_icon icon-basic-geolocalize-05"></div>
-                    <h3>Адреса:</h3>
-                    <p>${content.address}</p>
-                </div>
-                <div class="contact_box">
+
+                <div class="contact_box contact_phones">
                     <div class="contacts_icon icon-basic-smartphone"></div>
-                    <h3>Телефон:</h3>
-                    <p style="font-family: sans-serif;">${content.phone}</p>
+                    <h5><a href="tel:${content.phone_work}">${content.phone_work}</a></h5>
+                    <h5><a href="tel:${content.phone_seva}">${content.phone_seva}</a></h5>
+                    <h5><a href="tel:${content.phone_georgyi}">${content.phone_georgyi}</a></h5>
                 </div>
-                <!--<div class="contact_box">
-                    <div class="contacts_icon icon-basic-webpage-img-txt"></div>
-                    <h3>Веб-сайт:</h3>
-                    <p>${content.website}</p>
-                </div>-->
+
+                <div class="contact_box contact_email">
+                    <div class="contacts_icon icon-basic-mail"></div>
+                    <h5><a href="mailto:${content.email}">${content.email}</a></h5>
+                </div>
+
+                <div class="contact_box contact_office">
+                    <div class="hidden contacts_icon icon-basic-book-pencil"></div>
+                    <div class="contacts_icon icon-basic-geolocalize-05"></div>
+                    <h5 class="address"><a href="https://goo.gl/maps/VRb96k7gua6jUqYBA" target="_blank">${content.address}</a></h5>
+                </div>
+
             </div>
 
             <div class="col-sm-6 col-md-6">
                 <form class="main_form" method="post" id="my-form">
 
                     <label class="hidden">
-                        <span class="color_element">*</span> Новий лід:
-                        <input type="text" name="FIELDS[TITLE]" placeholder="Новий лід" data-validation-required-message="Новий лід" required="" aria-invalid="false" value="Новий лід sk-trans-ua.web.app">
+                        <span class="color_element">*</span> Lід:
+                        <input type="text" name="FIELDS[TITLE]" placeholder="" data-validation-required-message="Новий лід" required="" aria-invalid="false" value="Новий лід sk-trans-ua.web.app">
                         <span class="help-block text-danger"></span>
                     </label>
 
                     <label class="form-group">
-                        <span class="color_element">*</span> Ваше Ім'я:
-                        <input type="text" name="FIELDS[NAME]" placeholder="Ваше Ім'я" data-validation-required-message="Ви не ввели Імя" required="" aria-invalid="false">
+                        <span class="color_element">*</span> Ваше Ім'я
+                        <input type="text" name="FIELDS[NAME]" placeholder="" data-validation-required-message="Ви не ввели Імя" required="" aria-invalid="false">
                         <span class="help-block text-danger"></span>
                     </label>
                     <label class="form-group">
-                        <span class="color_element">*</span> Ваш E-mail:
-                        <input type="email" name="FIELDS[EMAIL][0][VALUE]" placeholder="Ваш E-mail" data-validation-required-message="Не корректно введений E-mail" required="">
+                        <span class="color_element">*</span> Ваш E-mail
+                        <input type="email" name="FIELDS[EMAIL][0][VALUE]" placeholder="" data-validation-required-message="Не корректно введений E-mail" required="">
                         <span class="help-block text-danger"></span>
                     </label>
                     <label class="form-group">
-                        <span class="color_element">*</span> Ваш номер телефону:
-                        <input type="text" name="FIELDS[PHONE][0][VALUE]" placeholder="Ваш номер телефону" data-validation-required-message="Ви не ввели нічого" required=""></textarea>
+                        <span class="color_element">*</span> Ваш номер телефону
+                        <input type="text" name="FIELDS[PHONE][0][VALUE]" placeholder="" data-validation-required-message="Ви не ввели нічого" required=""></textarea>
                         <span class="help-block text-danger"></span>
                     </label> 
                     <button type="submit">Відправити</button>
@@ -363,17 +368,12 @@ export function contacts_s_content(content) {
 export function footer_s_content(content) {
     let socials = key => `<li><a href="${content.socials[key]}" target="_blank"><i class="fab fas fa fa-${key}"></i></a></li>`
     return `
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div style="font-family: sans-serif;">
-                        &copy; ${content.copyright}
-                    </div>
-                    <div class="social_wrap">
-                        <ul>
-                            ${Object.keys(content.socials).map(socials).join(' ')}
-                            <!--<li><a href="#" target="_blank"><i class="lardi-trans-point"></i></a></li>-->
-                        </ul>
+                    <div class="col-sm"><div class="footer_copy">&copy; ${content.copyright}</div></div>
+                    <div class="col-sm social_wrap hidden">
+                        <ul>${Object.keys(content.socials).map(socials).join(' ')}</ul>
                     </div>
                 </div>
             </div>

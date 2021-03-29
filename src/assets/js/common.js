@@ -19,7 +19,10 @@ $(document).ready(function($) {
 
 	function heightDetect() {
 		$("#header").css("min-height", $(window).height());
-		// $("section").css("min-height", $(window).height());
+		$(".s_contacts").css("min-height", $(window).height()); 
+		$(".s_about").css("min-height", $(window).height()); 
+		// $("section").css("min-height", $(window).height()); 
+		//
 	}
 	heightDetect();
 	$(window).resize(function() {
@@ -95,7 +98,15 @@ $(document).ready(function($) {
 	    // Define what happens on successful data submission
 	    XHR.addEventListener( "load", function(event) {
 	    	$('form.main_form').append(`<p class="form-inf-block text-success">Ваші дані відправлені !</p>`)
-	    	$('form.main_form input').value = ''
+	    	
+	    	$('#my-form > label.hidden > input[name=FIELDS[NAME]]').val('')
+	    	$('#my-form > label.hidden > input[name=FIELDS[EMAIL][0][VALUE]]').val('')
+	    	$('#my-form > label.hidden > input[name=FIELDS[PHONE][0][VALUE]]').val('')
+	    	//#my-form > label.hidden > input[name=FIELDS[NAME]]
+	    	//#my-form > label.hidden > input[name=FIELDS[EMAIL][0][VALUE]]
+	    	//#my-form > label.hidden > input[name=FIELDS[PHONE][0][VALUE]]
+	    	//
+	    	//#my-form > label:nth-child(2) > input[type=text]
 	    	//$('form.main_form').append(`<pre>${event.target.responseText}</pre>`)
 	    } );
 	    // Define what happens in case of error

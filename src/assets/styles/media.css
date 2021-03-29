@@ -1,12 +1,29 @@
 /*==========  Desktop First Method  ==========*/
-
+@media only screen and (max-width : 1600px) {
+	.p_item img{
+		width: auto;
+    	height: auto;
+    	max-height: 500px;
+	}
+	.top_wrapper .top_text p {
+      letter-spacing: 9px}
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
+	.p_item img{
+		width: auto;
+    	height: auto;
+    	max-height: 500px;
+	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.p_item img{
+		width: auto;
+    	height: auto;
+    	max-height: 500px;
+	}
 	.s_portfolio li{
 		font-size: 2rem;
 		margin: 0 auto;
@@ -32,6 +49,17 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.top_wrapper .top_text p {
+	    font-size: 1.4rem;
+	    letter-spacing: 4px;
+	    font-weight: normal;
+	}
+	.s_about .social_wrap ul{
+		display: flex;
+	}
+	.s_about .social_wrap ul li{
+		margin: 0 auto;
+	}
 	.s_portfolio li{
 		font-size: 2.3rem;
 	}
@@ -52,11 +80,24 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+	.btn_more{
+		margin-top: 5%;
+	}
+	.p_item .port_item_cont {
+		top: -20%;
+		left: 4%;
+    	width: 92%;
+        height: 100%;
+	    background-color: rgba(3, 23, 33, 0.88);
+	    border: 3px solid #2EA2CC;
+	    text-align: center;
+	    padding: 5px !important;
+	    padding-top: 15% !important;
+	}
+	.p_item h3 {}
+	.p_item p {}
 	.s_portfolio li{
 		font-size: 2.3rem;
-	}
-	.s_portfolio .s_descr{
-		/*margin-bottom: 4.5vh;*/
 	}
 	.top_wrapper .top_text h1 {
 		font-size: 4em;
@@ -64,8 +105,9 @@
 		padding-right: 10px;
 	}
 	.top_wrapper .top_text p{
-		font-size: 1rem;
-    	letter-spacing: 2.5px;
+	    font-size: 1.4rem;
+	    letter-spacing: 2.5px;
+	    font-weight: normal;
 	}
 	.main_footer {
 		text-align: left;
@@ -78,10 +120,69 @@
 	.main_footer .social_wrap ul {
 		padding-left: 0;
 	}
+
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+	.contact_box h5 a{
+		margin: 0 auto;
+	}
+	.contact_box h5{
+		display: flex;
+	}
+	.contact_phones a{
+		font-size: 3vh;
+    	margin: 0 auto;
+	}
+	.bg_dark .s_descr {
+	    font-weight: 300;
+	    letter-spacing: 1.5px;
+	}
+	.resume_more button{
+		border:0px solid #fff;
+	    margin: 10px;
+	    margin-top: 25px;
+    	letter-spacing: 1px;
+	}
+	.s_resume{padding: 70px 0 50px}
+	.s_about .social_wrap ul{
+		display: flex;
+	}
+	.s_about .social_wrap ul li{
+		margin: 0 auto;
+	}
+	.p_item p {
+	    font-size: 2.5vh;
+	    padding: 0;
+	    color: #fafafa;
+	    letter-spacing: 1px;
+	    font-weight: 200;
+	    line-height: 1.5;
+	}
+	.p_item h3 {
+	    color: #2EA2CC;
+	    margin: 0;
+	    font-weight: 600;
+	    letter-spacing: 8px;
+	    font-size: 3vh;
+	    margin-top: 10%;
+	}
+	.p_item .port_item_cont {
+	    position: absolute;
+	    top: -20%;
+	    left: 1%;
+	    width: 98%;
+	    height: 100%;
+	    background-color: rgba(3, 23, 33, 0.88);
+	    border: 3px solid #2EA2CC;
+	    text-align: center;
+	    padding: 5px !important;
+	    padding-top: 20px !important;
+	    opacity: 0;
+	    -webkit-transition: all 0.5s;
+	    transition: all 0.5s;
+	}
 	.top_wrapper .top_text h1 {
 		font-size: 3em;
 		padding-left: 10px;
@@ -131,10 +232,12 @@
 		font-size: 2vh;
 	}
 	section h2{
-		font-size: 3vh;
+		/*font-size: 3.5vh;*/
+	    /*font-weight: bold;*/
+	    /*letter-spacing: 5px;*/
 	}
 	section .personal_header {
-		font-size: 2.5vh;
+		font-size: 2vh;
 	}
 	section h3, .main_head h3{
 		/*margin-top: 55px;*/
@@ -146,14 +249,14 @@
 		padding: 0;
 		margin: auto;	
 	}
-	.p_item img{
-		width: auto;
-		height: 100%;
-	}
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-
+	.p_item img{
+		width: auto;
+    	height: auto;
+    	max-height: 500px;
+	}
 }
 
 /* Large Devices, Wide Screens */

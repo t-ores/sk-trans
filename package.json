@@ -24,7 +24,7 @@
     "url": "https://github.com/t-ores/sk-trans/issues"
   },
   "homepage": "https://github.com/t-ores/sk-trans#readme",
-    "dependencies": {
+  "dependencies": {
     "animate.css": "^4.1.1",
     "classes": "^0.3.0",
     "firebase": "^8.2.10",
