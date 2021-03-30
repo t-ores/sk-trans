@@ -1,6 +1,8 @@
 body {
-  /*font-family: 'Roboto', sans-serif;*/
   font-family: 'Roboto', system-ui;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Exo 2', sans-serif;
+
   font-weight: 200;
   font-size: 14px;
   min-width: 320px;

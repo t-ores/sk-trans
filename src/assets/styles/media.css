@@ -1,29 +1,25 @@
 /*==========  Desktop First Method  ==========*/
 @media only screen and (max-width : 1600px) {
-	.p_item img{
+/*	.p_item img{
 		width: auto;
     	height: auto;
     	max-height: 500px;
-	}
+	}*/
 	.top_wrapper .top_text p {
       letter-spacing: 9px}
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-	.p_item img{
+/*	.p_item img{
 		width: auto;
     	height: auto;
     	max-height: 500px;
-	}
+	}*/
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	.p_item img{
-		width: auto;
-    	height: auto;
-    	max-height: 500px;
-	}
+
 	.s_portfolio li{
 		font-size: 2rem;
 		margin: 0 auto;
@@ -80,6 +76,10 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+	.s_about .section_content h3 {
+	    font-size: 2.5vh;
+	    letter-spacing: 2px;
+	}
 	.btn_more{
 		margin-top: 5%;
 	}
@@ -94,7 +94,9 @@
 	    padding: 5px !important;
 	    padding-top: 15% !important;
 	}
-	.p_item h3 {}
+	.p_item h3 {
+	    letter-spacing: 2px;
+	}
 	.p_item p {}
 	.s_portfolio li{
 		font-size: 2.3rem;
@@ -125,6 +127,10 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+	.s_about .section_content h3{
+		font-size: 2.3vh;
+		letter-spacing: 1px;
+	}
 	.contact_box h5 a{
 		margin: 0 auto;
 	}
@@ -164,7 +170,8 @@
 	    color: #2EA2CC;
 	    margin: 0;
 	    font-weight: 600;
-	    letter-spacing: 8px;
+	    /*letter-spacing: 8px;*/
+	    letter-spacing: 1px;
 	    font-size: 3vh;
 	    margin-top: 10%;
 	}

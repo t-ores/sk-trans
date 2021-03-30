@@ -425,10 +425,12 @@ section h2{
     margin-top: 0;
     font-size: 2.3vh;
     font-weight: 300;
+    text-align: justify;
 }
 .mfp-content .podrt_descr{
     background-color: #fff;
-    max-width: 90vh;
+    max-width: 1200px;
+    width: auto;
     margin: auto;
 }
 .fa:hover{

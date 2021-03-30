@@ -136,7 +136,7 @@ $(document).ready(function($) {
             var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
         })(window,document,'https://cdn.bitrix24.ua/b17015247/crm/site_button/loader_2_qtkg72.js');
 	// CHAT WIDGET
-
+	//$('input[type=phone]').mask("+380 (99) 999-99-99")
 });
 
 $(window).on('load', function (){

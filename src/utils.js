@@ -94,11 +94,8 @@ export function s_content(content) {
 //ABOUT
 export function about_s_content(val_right, val_left) {
     let toStr = key => `<li>${val_left.ul.item[key]}</li>`
-    let socials = key => `<li><a href="${val_left.socials[key]}" target="_blank"><i class="fab fas fa fa-${key}"></i></a></li>`
+    let socials = key => `<li><a rel="me" href="${val_left.socials[key]}" target="_blank"><i class="fab fas fa fa-${key}"></i></a></li>`
     let about_p = key => `<p>${val_right.p[key]}</p>`
-
-    let tst = Object.keys(val_left.ul.item).map(toStr).join(' ')
-    console.log(tst)
     return `
 <div class="section_content">
     <div class="container">
@@ -114,7 +111,6 @@ export function about_s_content(val_right, val_left) {
                 <div class="social_wrap">
                     <ul>
                         ${Object.keys(val_left.socials).map(socials).join(' ')}
-                        <!--<li><a href="#" target="_blank"><i class="lardi-trans-point"></i></a></li>-->
                     </ul>
                 </div>
             </div>
@@ -264,7 +260,7 @@ export function testimonials_s_content(content){
                             </div>
 
                         </div>
-                        <div class="resume_more"><center><a href="https://lardi-trans.ua/reliability_zone/search_responses/?firmToId=16751245600&responseRate"><button>Переглянути більше відгуків</button></a></center></div>
+                        <div class="resume_more"><center><a rel="nofollow" href="https://lardi-trans.ua/reliability_zone/search_responses/?firmToId=16751245600&responseRate"><button>Переглянути більше відгуків</button></a></center></div>
                     </div>
                 </div>
             </div>`
@@ -315,7 +311,7 @@ export function contacts_s_content(content) {
                     <div class="contacts_icon icon-basic-smartphone"></div>
                     <h5><a href="tel:${content.phone_work}">${content.phone_work}</a></h5>
                     <h5><a href="tel:${content.phone_seva}">${content.phone_seva}</a></h5>
-                    <h5><a href="tel:${content.phone_georgyi}">${content.phone_georgyi}</a></h5>
+                    <h5><a href="tel:${content.phone_oleksandr}">${content.phone_oleksandr}</a></h5>
                 </div>
 
                 <div class="contact_box contact_email">
@@ -326,7 +322,7 @@ export function contacts_s_content(content) {
                 <div class="contact_box contact_office">
                     <div class="hidden contacts_icon icon-basic-book-pencil"></div>
                     <div class="contacts_icon icon-basic-geolocalize-05"></div>
-                    <h5 class="address"><a href="https://goo.gl/maps/VRb96k7gua6jUqYBA" target="_blank">${content.address}</a></h5>
+                    <h5 class="address"><a rel="nofollow" href="https://goo.gl/maps/VRb96k7gua6jUqYBA" target="_blank">${content.address}</a></h5>
                 </div>
 
             </div>
@@ -352,7 +348,7 @@ export function contacts_s_content(content) {
                     </label>
                     <label class="form-group">
                         <span class="color_element">*</span> Ваш номер телефону
-                        <input type="text" name="FIELDS[PHONE][0][VALUE]" placeholder="" data-validation-required-message="Ви не ввели нічого" required=""></textarea>
+                        <input type="phone" name="FIELDS[PHONE][0][VALUE]" placeholder="" data-validation-required-message="Ви не ввели нічого" required=""></textarea>
                         <span class="help-block text-danger"></span>
                     </label> 
                     <button type="submit">Відправити</button>
@@ -366,7 +362,7 @@ export function contacts_s_content(content) {
 //СONTACTS
 
 export function footer_s_content(content) {
-    let socials = key => `<li><a href="${content.socials[key]}" target="_blank"><i class="fab fas fa fa-${key}"></i></a></li>`
+    let socials = key => `<li><a rel="me" href="${content.socials[key]}" target="_blank"><i class="fab fas fa fa-${key}"></i></a></li>`
     return `
         <div class="container-fluid">
             <div class="row">

@@ -48,7 +48,7 @@ export const model = [
 // ABOUT
     new AboutBlock({
         about_right:{
-            h3: 'Транспортно-логістична компанія <strong style="text-transform:none;">Sk-TRANS УКРАЇНА</strong> гарантує доставку вашого вантажу до місця призначення цілим і неушкодженим.',
+            h3: 'Транспортно-логістична компанія <strong style="text-transform:none;">Sk-TRANS УКРАЇНА</strong> гарантує доставку вашого вантажу до місця призначення цілим і неушкодженим, вчасно та без переплат.',
             p:[
                 '',
                 "<strong>Sk-TRANS УКРАЇНА</strong> - це професійна і злагоджена команда з більш ніж 10-ти річним досвідом роботи в сфері вантажоперевезеннь та логістики. "+ 
@@ -194,10 +194,10 @@ new TestimonialsBloc(
 //CONTACTS
 new ContactBlock({
         address:'м.Луцьк, вул.Запорізька, 37',
-        phone_work:'+380 97 919 5915',
-        phone_seva:'+380 68 819 9191',
-        phone_oleksandr:'+380 95 242 3280',
-        phone_georgyi:'+380 96 042 6268',
+        phone_work:'+380 (97) 919 5915',
+        phone_seva:'+380 (68) 819 9191',
+        phone_oleksandr:'+380 (95) 242 3280',
+        //phone_georgyi:'+380 96 042 6268',
         email:'sktrans.com.ua@gmail.com'
     },
     {
