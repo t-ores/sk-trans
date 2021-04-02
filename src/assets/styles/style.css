@@ -199,7 +199,7 @@ section .personal_header{
     margin: 0;
     font-weight: 600;
     letter-spacing: 8px;
-    font-size: 3.5vh;
+    font-size: 3vh;
 }
 /*  .p_item a {
     background-color: rgb(0 0 0 / 25%);
